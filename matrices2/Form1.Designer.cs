@@ -29,7 +29,7 @@ namespace matrices2
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelDeterminant = new System.Windows.Forms.Label();
             this.RemoveMatrix = new System.Windows.Forms.Button();
             this.Determinant = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,14 +41,14 @@ namespace matrices2
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // labelDeterminant
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(602, 233);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "label3";
+            this.labelDeterminant.AutoSize = true;
+            this.labelDeterminant.Location = new System.Drawing.Point(602, 233);
+            this.labelDeterminant.Name = "labelDeterminant";
+            this.labelDeterminant.Size = new System.Drawing.Size(64, 13);
+            this.labelDeterminant.TabIndex = 17;
+            this.labelDeterminant.Text = "Determinant";
             // 
             // RemoveMatrix
             // 
@@ -147,7 +147,7 @@ namespace matrices2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelDeterminant);
             this.Controls.Add(this.RemoveMatrix);
             this.Controls.Add(this.Determinant);
             this.Controls.Add(this.label2);
@@ -166,7 +166,7 @@ namespace matrices2
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelDeterminant;
         private System.Windows.Forms.Button RemoveMatrix;
         private System.Windows.Forms.Button Determinant;
         private System.Windows.Forms.Label label2;

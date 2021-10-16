@@ -85,7 +85,28 @@ namespace matrices2
                 for (int k = 0; k < rows; k++)
                     matrix[i, k] = Convert.ToDouble(classTextBoxArr.textBoxArr[k, i].Text);
 
+            labelDeterminant.Text = "Determinant" + Convert.ToString(Determinant(ref matrix));
             Console.WriteLine();
+        }
+        private double Determinant(ref double[,] matrix)
+        {
+            double Determinant = 1;
+            for (int i = 0, rows = matrix.Length; i < rows; i++)
+            {
+                Determinant *= matrix[i, i];
+            }
+            return Determinant;
+        }
+        private void TriangularMtrixView(ref double[,] matrix)
+        {
+
+            for (int i = 0, rows = matrix.Length; i < rows; i++)
+            {
+                for (int k = 0; k < rows; k++)
+                {
+
+                }
+            }
         }
         #endregion
     }
