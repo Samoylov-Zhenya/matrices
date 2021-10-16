@@ -85,6 +85,7 @@ namespace matrices2
                 for (int k = 0; k < rows; k++)
                     matrix[i, k] = Convert.ToDouble(classTextBoxArr.textBoxArr[k, i].Text);
 
+            TriangularMtrixView(ref matrix);
             labelDeterminant.Text = "Determinant" + Convert.ToString(Determinant(ref matrix));
             Console.WriteLine();
         }
@@ -99,15 +100,29 @@ namespace matrices2
         }
         private void TriangularMtrixView(ref double[,] matrix)
         {
-
-            for (int i = 0, rows = matrix.Length; i < rows; i++)
+            int rows = matrix.Length;
+            double[,] matrixReturn = new double[rows, rows];
+            //cltkfnm kjubre 
+            for (int i = 0; i < rows; i++)
             {
-                for (int k = 0; k < rows; k++)
+                matrixReturn[0, i] = matrix[0, i];
+            }
+            
+            for (int i = 1; i < rows; i++)
+            {
+                for (int k = 1; k < rows; k++)
                 {
+                    matrixReturn[0, i] = matrix[0, i];
 
                 }
             }
+            return;
         }
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,13 +31,10 @@ namespace matrices2
         {
             this.labelDeterminant = new System.Windows.Forms.Label();
             this.RemoveMatrix = new System.Windows.Forms.Button();
-            this.Determinant = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonDeterminant = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.CreateMatrix = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,24 +57,15 @@ namespace matrices2
             this.RemoveMatrix.UseVisualStyleBackColor = true;
             this.RemoveMatrix.Click += new System.EventHandler(this.RemoveMatrix_Click);
             // 
-            // Determinant
+            // buttonDeterminant
             // 
-            this.Determinant.Location = new System.Drawing.Point(605, 180);
-            this.Determinant.Name = "Determinant";
-            this.Determinant.Size = new System.Drawing.Size(120, 40);
-            this.Determinant.TabIndex = 15;
-            this.Determinant.Text = "Determinant of the matrix";
-            this.Determinant.UseVisualStyleBackColor = true;
-            this.Determinant.Click += new System.EventHandler(this.Determinant_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(601, 290);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "columns";
+            this.buttonDeterminant.Location = new System.Drawing.Point(605, 180);
+            this.buttonDeterminant.Name = "buttonDeterminant";
+            this.buttonDeterminant.Size = new System.Drawing.Size(120, 40);
+            this.buttonDeterminant.TabIndex = 15;
+            this.buttonDeterminant.Text = "Determinant of the matrix";
+            this.buttonDeterminant.UseVisualStyleBackColor = true;
+            this.buttonDeterminant.Click += new System.EventHandler(this.Determinant_Click);
             // 
             // label1
             // 
@@ -87,28 +75,6 @@ namespace matrices2
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "rows";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(658, 283);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(67, 20);
-            this.numericUpDown2.TabIndex = 12;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // numericUpDown1
             // 
@@ -149,15 +115,12 @@ namespace matrices2
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelDeterminant);
             this.Controls.Add(this.RemoveMatrix);
-            this.Controls.Add(this.Determinant);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.buttonDeterminant);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.CreateMatrix);
             this.Name = "Form1";
             this.Text = "matrices";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,10 +131,8 @@ namespace matrices2
 
         private System.Windows.Forms.Label labelDeterminant;
         private System.Windows.Forms.Button RemoveMatrix;
-        private System.Windows.Forms.Button Determinant;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonDeterminant;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button CreateMatrix;
     }
