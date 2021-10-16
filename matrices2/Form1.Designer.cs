@@ -58,6 +58,7 @@ namespace matrices2
             this.RemoveMatrix.TabIndex = 16;
             this.RemoveMatrix.Text = "Remove matrix";
             this.RemoveMatrix.UseVisualStyleBackColor = true;
+            this.RemoveMatrix.Click += new System.EventHandler(this.RemoveMatrix_Click);
             // 
             // Determinant
             // 
@@ -67,6 +68,7 @@ namespace matrices2
             this.Determinant.TabIndex = 15;
             this.Determinant.Text = "Determinant of the matrix";
             this.Determinant.UseVisualStyleBackColor = true;
+            this.Determinant.Click += new System.EventHandler(this.Determinant_Click);
             // 
             // label2
             // 
@@ -138,6 +140,7 @@ namespace matrices2
             this.CreateMatrix.TabIndex = 10;
             this.CreateMatrix.Text = "Create matrix";
             this.CreateMatrix.UseVisualStyleBackColor = true;
+            this.CreateMatrix.Click += new System.EventHandler(this.CreateMatrix_Click);
             // 
             // Form1
             // 
