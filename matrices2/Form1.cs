@@ -12,23 +12,22 @@ namespace matrices2
 {
     public partial class Form1 : Form
     {
-        classTextBox classTextBoxArr;
         public Form1()
         {
             InitializeComponent();
         }
         #region --- Class ---
+        classTextBox classTextBoxArr;
         class classTextBox
         {
             static public int rows { get; set; }
-            static public int columns { get; set; }
+            //static public int columns { get; set; }
             public TextBox[,] textBoxArr;
 
-            public classTextBox(int rows, int columns)
+            public classTextBox(int rows)
             {
                 classTextBox.rows = rows;
-                classTextBox.columns = columns;
-                textBoxArr = new TextBox[rows, columns];
+                textBoxArr = new TextBox[rows, rows];
                 f();
 
             }
@@ -36,7 +35,7 @@ namespace matrices2
             {
                 for (int i = 0; i < rows; i++)
                 {
-                    for (int k = 0; k < columns; k++)
+                    for (int k = 0; k < rows; k++)
                     {
                         textBoxArr[i, k] = new System.Windows.Forms.TextBox
                         {
@@ -55,14 +54,11 @@ namespace matrices2
         {
             RemoveMatrix_Click(sender, e);
             int rows = (int)numericUpDown1.Value;
-            int columns = (int)numericUpDown2.Value;
-            //TextBoxsArr textBoxsArr = new TextBoxsArr(rows, columns);
-            classTextBoxArr = new classTextBox(rows, columns);
+            classTextBoxArr = new classTextBox(rows);
 
             foreach (var item in classTextBoxArr.textBoxArr)
             {
                 Controls.Add(item);
-                //Controls.Remove(item);
             }
         }
 
@@ -81,7 +77,17 @@ namespace matrices2
         #endregion
         private void Determinant_Click(object sender, EventArgs e)
         {
+            int rows = classTextBox.rows;
+            double[,] matrix = new double[rows, rows];
 
+            for (int i = 0; i < rows; i++)
+            {
+                for (int k = 0; k < rows; k++)
+                {
+                    matrix[i, k] = Convert.ToDouble(classTextBoxArr.textBoxArr[k, i].Text);
+                }
+            }
+            Console.WriteLine();
         }
     }
 }
