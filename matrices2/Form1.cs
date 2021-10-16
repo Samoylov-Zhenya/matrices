@@ -70,24 +70,23 @@ namespace matrices2
             }
             foreach (var item in classTextBoxArr.textBoxArr)
             {
-                //Controls.Add(item);
                 Controls.Remove(item);
+                //Controls.Add(item);
             }
         }
         #endregion
+        #region --- Determinant ---
         private void Determinant_Click(object sender, EventArgs e)
         {
             int rows = classTextBox.rows;
             double[,] matrix = new double[rows, rows];
 
             for (int i = 0; i < rows; i++)
-            {
                 for (int k = 0; k < rows; k++)
-                {
                     matrix[i, k] = Convert.ToDouble(classTextBoxArr.textBoxArr[k, i].Text);
-                }
-            }
+
             Console.WriteLine();
         }
+        #endregion
     }
 }
