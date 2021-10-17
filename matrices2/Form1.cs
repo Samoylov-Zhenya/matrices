@@ -71,15 +71,28 @@ namespace matrices2
         }
         private void RemoveMatrix_Click(object sender, EventArgs e)
         {
-            if (DeterminantOfMatrix == null)
+            if (DeterminantOfMatrix != null)
             {
-                return;
+                foreach (var item in DeterminantOfMatrix.textBoxArr)
+                {
+                    Controls.Remove(item);
+                }
             }
-            foreach (var item in DeterminantOfMatrix.textBoxArr)
+            if (sumOfMatrix1 != null)
             {
-                Controls.Remove(item);
-                //Controls.Add(item);
+                foreach (var item in sumOfMatrix1.textBoxArr)
+                {
+                    Controls.Remove(item);
+                }
             }
+            if (sumOfMatrix2 != null)
+            {
+                foreach (var item in sumOfMatrix2.textBoxArr)
+                {
+                    Controls.Remove(item);
+                }
+            }
+            
         }
         #endregion
         #region --- Determinant --- не работает 
