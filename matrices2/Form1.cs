@@ -99,10 +99,6 @@ namespace matrices2
         }
         #endregion
         #region --- Click Add Determinant ---
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
         #endregion
         #region --- Determinant --- не работает 
         private void Determinant_Click(object sender, EventArgs e)
@@ -233,9 +229,10 @@ namespace matrices2
             }
         }
 
+
+
         #endregion
 
-        
         
     }
 }

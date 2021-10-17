@@ -30,37 +30,37 @@ namespace matrices2
         private void InitializeComponent()
         {
             this.labelDeterminant = new System.Windows.Forms.Label();
-            this.RemoveMatrix = new System.Windows.Forms.Button();
+            this.buttonRemoveMatrix = new System.Windows.Forms.Button();
             this.buttonDeterminant = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDownRowsDeterminant = new System.Windows.Forms.NumericUpDown();
-            this.CreateMatrix = new System.Windows.Forms.Button();
+            this.buttonCreateMatrix = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageDeterminant = new System.Windows.Forms.TabPage();
+            this.checkBoxRandom = new System.Windows.Forms.CheckBox();
             this.tabPageSum = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonRemoveSum = new System.Windows.Forms.Button();
+            this.buttonSum = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.buttonCreateSum = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.numericUpDownSum2 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDownRowsSum1 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDownRowsSum2 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
             this.numericUpDownColumnSum1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.numericUpDownRowsSum1 = new System.Windows.Forms.NumericUpDown();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBoxRandom = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsDeterminant)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageDeterminant.SuspendLayout();
             this.tabPageSum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSum2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsSum1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsSum2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumnSum1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsSum1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelDeterminant
@@ -73,16 +73,16 @@ namespace matrices2
             this.labelDeterminant.TabIndex = 17;
             this.labelDeterminant.Text = "Determinant:";
             // 
-            // RemoveMatrix
+            // buttonRemoveMatrix
             // 
-            this.RemoveMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RemoveMatrix.Location = new System.Drawing.Point(96, 104);
-            this.RemoveMatrix.Name = "RemoveMatrix";
-            this.RemoveMatrix.Size = new System.Drawing.Size(60, 40);
-            this.RemoveMatrix.TabIndex = 16;
-            this.RemoveMatrix.Text = "Remove matrix";
-            this.RemoveMatrix.UseVisualStyleBackColor = true;
-            this.RemoveMatrix.Click += new System.EventHandler(this.RemoveMatrix_Click);
+            this.buttonRemoveMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRemoveMatrix.Location = new System.Drawing.Point(96, 104);
+            this.buttonRemoveMatrix.Name = "buttonRemoveMatrix";
+            this.buttonRemoveMatrix.Size = new System.Drawing.Size(60, 40);
+            this.buttonRemoveMatrix.TabIndex = 16;
+            this.buttonRemoveMatrix.Text = "Remove matrix";
+            this.buttonRemoveMatrix.UseVisualStyleBackColor = true;
+            this.buttonRemoveMatrix.Click += new System.EventHandler(this.RemoveMatrix_Click);
             // 
             // buttonDeterminant
             // 
@@ -128,16 +128,16 @@ namespace matrices2
             0,
             0});
             // 
-            // CreateMatrix
+            // buttonCreateMatrix
             // 
-            this.CreateMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreateMatrix.Location = new System.Drawing.Point(30, 104);
-            this.CreateMatrix.Name = "CreateMatrix";
-            this.CreateMatrix.Size = new System.Drawing.Size(60, 40);
-            this.CreateMatrix.TabIndex = 10;
-            this.CreateMatrix.Text = "Create matrix";
-            this.CreateMatrix.UseVisualStyleBackColor = true;
-            this.CreateMatrix.Click += new System.EventHandler(this.CreateMatrix_Click);
+            this.buttonCreateMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCreateMatrix.Location = new System.Drawing.Point(30, 104);
+            this.buttonCreateMatrix.Name = "buttonCreateMatrix";
+            this.buttonCreateMatrix.Size = new System.Drawing.Size(60, 40);
+            this.buttonCreateMatrix.TabIndex = 10;
+            this.buttonCreateMatrix.Text = "Create matrix";
+            this.buttonCreateMatrix.UseVisualStyleBackColor = true;
+            this.buttonCreateMatrix.Click += new System.EventHandler(this.CreateMatrix_Click);
             // 
             // tabControl1
             // 
@@ -154,8 +154,8 @@ namespace matrices2
             this.tabPageDeterminant.Controls.Add(this.checkBoxRandom);
             this.tabPageDeterminant.Controls.Add(this.buttonDeterminant);
             this.tabPageDeterminant.Controls.Add(this.labelDeterminant);
-            this.tabPageDeterminant.Controls.Add(this.CreateMatrix);
-            this.tabPageDeterminant.Controls.Add(this.RemoveMatrix);
+            this.tabPageDeterminant.Controls.Add(this.buttonCreateMatrix);
+            this.tabPageDeterminant.Controls.Add(this.buttonRemoveMatrix);
             this.tabPageDeterminant.Controls.Add(this.numericUpDownRowsDeterminant);
             this.tabPageDeterminant.Controls.Add(this.label1);
             this.tabPageDeterminant.Location = new System.Drawing.Point(4, 22);
@@ -166,14 +166,25 @@ namespace matrices2
             this.tabPageDeterminant.Text = "Determinant";
             this.tabPageDeterminant.UseVisualStyleBackColor = true;
             // 
+            // checkBoxRandom
+            // 
+            this.checkBoxRandom.AutoSize = true;
+            this.checkBoxRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxRandom.Location = new System.Drawing.Point(43, 70);
+            this.checkBoxRandom.Name = "checkBoxRandom";
+            this.checkBoxRandom.Size = new System.Drawing.Size(101, 28);
+            this.checkBoxRandom.TabIndex = 18;
+            this.checkBoxRandom.Text = "Random";
+            this.checkBoxRandom.UseVisualStyleBackColor = true;
+            // 
             // tabPageSum
             // 
             this.tabPageSum.Controls.Add(this.label8);
             this.tabPageSum.Controls.Add(this.label2);
-            this.tabPageSum.Controls.Add(this.button3);
-            this.tabPageSum.Controls.Add(this.button1);
+            this.tabPageSum.Controls.Add(this.buttonRemoveSum);
+            this.tabPageSum.Controls.Add(this.buttonSum);
             this.tabPageSum.Controls.Add(this.label5);
-            this.tabPageSum.Controls.Add(this.button2);
+            this.tabPageSum.Controls.Add(this.buttonCreateSum);
             this.tabPageSum.Controls.Add(this.label7);
             this.tabPageSum.Controls.Add(this.label3);
             this.tabPageSum.Controls.Add(this.numericUpDownSum2);
@@ -200,15 +211,35 @@ namespace matrices2
             this.label8.TabIndex = 32;
             this.label8.Text = "Matrix 2";
             // 
-            // label7
+            // label2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(30, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 24);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Matrix 1";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(30, 355);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 24);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Determinant";
+            // 
+            // buttonRemoveSum
+            // 
+            this.buttonRemoveSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRemoveSum.Location = new System.Drawing.Point(109, 231);
+            this.buttonRemoveSum.Name = "buttonRemoveSum";
+            this.buttonRemoveSum.Size = new System.Drawing.Size(67, 40);
+            this.buttonRemoveSum.TabIndex = 23;
+            this.buttonRemoveSum.Text = "Remove matrix";
+            this.buttonRemoveSum.UseVisualStyleBackColor = true;
+            // 
+            // buttonSum
+            // 
+            this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSum.Location = new System.Drawing.Point(34, 277);
+            this.buttonSum.Name = "buttonSum";
+            this.buttonSum.Size = new System.Drawing.Size(142, 40);
+            this.buttonSum.TabIndex = 22;
+            this.buttonSum.Text = "Sum of matrices";
+            this.buttonSum.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -219,6 +250,36 @@ namespace matrices2
             this.label5.Size = new System.Drawing.Size(73, 24);
             this.label5.TabIndex = 30;
             this.label5.Text = "column";
+            // 
+            // buttonCreateSum
+            // 
+            this.buttonCreateSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCreateSum.Location = new System.Drawing.Point(34, 231);
+            this.buttonCreateSum.Name = "buttonCreateSum";
+            this.buttonCreateSum.Size = new System.Drawing.Size(69, 40);
+            this.buttonCreateSum.TabIndex = 19;
+            this.buttonCreateSum.Text = "Create matrix";
+            this.buttonCreateSum.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(30, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 24);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Matrix 1";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(30, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 24);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "rows";
             // 
             // numericUpDownSum2
             // 
@@ -238,6 +299,39 @@ namespace matrices2
             this.numericUpDownSum2.Size = new System.Drawing.Size(67, 29);
             this.numericUpDownSum2.TabIndex = 29;
             this.numericUpDownSum2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(30, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 24);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "column";
+            // 
+            // numericUpDownRowsSum1
+            // 
+            this.numericUpDownRowsSum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownRowsSum1.Location = new System.Drawing.Point(109, 42);
+            this.numericUpDownRowsSum1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownRowsSum1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownRowsSum1.Name = "numericUpDownRowsSum1";
+            this.numericUpDownRowsSum1.Size = new System.Drawing.Size(67, 29);
+            this.numericUpDownRowsSum1.TabIndex = 20;
+            this.numericUpDownRowsSum1.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -276,16 +370,6 @@ namespace matrices2
             0,
             0});
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(30, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 24);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "column";
-            // 
             // numericUpDownColumnSum1
             // 
             this.numericUpDownColumnSum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -309,91 +393,6 @@ namespace matrices2
             0,
             0});
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(34, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 40);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Sum of matrices";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(30, 355);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 24);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Determinant";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(30, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 24);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "rows";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(34, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(69, 40);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Create matrix";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDownRowsSum1
-            // 
-            this.numericUpDownRowsSum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDownRowsSum1.Location = new System.Drawing.Point(109, 42);
-            this.numericUpDownRowsSum1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownRowsSum1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownRowsSum1.Name = "numericUpDownRowsSum1";
-            this.numericUpDownRowsSum1.Size = new System.Drawing.Size(67, 29);
-            this.numericUpDownRowsSum1.TabIndex = 20;
-            this.numericUpDownRowsSum1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(109, 231);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 40);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Remove matrix";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRandom
-            // 
-            this.checkBoxRandom.AutoSize = true;
-            this.checkBoxRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxRandom.Location = new System.Drawing.Point(43, 70);
-            this.checkBoxRandom.Name = "checkBoxRandom";
-            this.checkBoxRandom.Size = new System.Drawing.Size(101, 28);
-            this.checkBoxRandom.TabIndex = 18;
-            this.checkBoxRandom.Text = "Random";
-            this.checkBoxRandom.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,9 +408,9 @@ namespace matrices2
             this.tabPageSum.ResumeLayout(false);
             this.tabPageSum.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSum2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsSum1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsSum2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumnSum1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsSum1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,22 +418,22 @@ namespace matrices2
         #endregion
 
         private System.Windows.Forms.Label labelDeterminant;
-        private System.Windows.Forms.Button RemoveMatrix;
+        private System.Windows.Forms.Button buttonRemoveMatrix;
         private System.Windows.Forms.Button buttonDeterminant;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDownRowsDeterminant;
-        private System.Windows.Forms.Button CreateMatrix;
+        private System.Windows.Forms.Button buttonCreateMatrix;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageDeterminant;
         private System.Windows.Forms.TabPage tabPageSum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDownColumnSum1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCreateSum;
         private System.Windows.Forms.NumericUpDown numericUpDownRowsSum1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonRemoveSum;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
