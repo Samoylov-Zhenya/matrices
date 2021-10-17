@@ -40,13 +40,13 @@ namespace matrices2
             this.checkBoxRandomDeterminant = new System.Windows.Forms.CheckBox();
             this.tabPageSum = new System.Windows.Forms.TabPage();
             this.checkBoxRandom2Sum = new System.Windows.Forms.CheckBox();
+            this.buttonCreateSum = new System.Windows.Forms.Button();
             this.checkBoxRandom1Sum = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonRemoveSum = new System.Windows.Forms.Button();
             this.buttonSum = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.buttonCreateSum = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDownColumnSum2 = new System.Windows.Forms.NumericUpDown();
@@ -55,6 +55,7 @@ namespace matrices2
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDownRowsSum2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownColumnSum1 = new System.Windows.Forms.NumericUpDown();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsDeterminant)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPageDeterminant.SuspendLayout();
@@ -182,10 +183,14 @@ namespace matrices2
             // 
             this.tabControl1.Controls.Add(this.tabPageDeterminant);
             this.tabControl1.Controls.Add(this.tabPageSum);
-            this.tabControl1.Location = new System.Drawing.Point(588, 12);
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControl1.ItemSize = new System.Drawing.Size(70, 24);
+            this.tabControl1.Location = new System.Drawing.Point(587, 12);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(2, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(200, 475);
+            this.tabControl1.Size = new System.Drawing.Size(201, 475);
             this.tabControl1.TabIndex = 18;
             // 
             // tabPageDeterminant
@@ -198,10 +203,10 @@ namespace matrices2
             this.tabPageDeterminant.Controls.Add(this.buttonRemoveMatrix);
             this.tabPageDeterminant.Controls.Add(this.numericUpDownRowsDeterminant);
             this.tabPageDeterminant.Controls.Add(this.label1);
-            this.tabPageDeterminant.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDeterminant.Location = new System.Drawing.Point(4, 28);
             this.tabPageDeterminant.Name = "tabPageDeterminant";
             this.tabPageDeterminant.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDeterminant.Size = new System.Drawing.Size(192, 449);
+            this.tabPageDeterminant.Size = new System.Drawing.Size(193, 443);
             this.tabPageDeterminant.TabIndex = 0;
             this.tabPageDeterminant.Text = "Determinant";
             // 
@@ -241,16 +246,18 @@ namespace matrices2
             this.tabPageSum.Controls.Add(this.label6);
             this.tabPageSum.Controls.Add(this.numericUpDownRowsSum2);
             this.tabPageSum.Controls.Add(this.numericUpDownColumnSum1);
-            this.tabPageSum.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSum.Location = new System.Drawing.Point(4, 28);
             this.tabPageSum.Name = "tabPageSum";
             this.tabPageSum.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSum.Size = new System.Drawing.Size(192, 449);
+            this.tabPageSum.Size = new System.Drawing.Size(193, 443);
             this.tabPageSum.TabIndex = 1;
             this.tabPageSum.Text = "Sum";
             // 
             // checkBoxRandom2Sum
             // 
             this.checkBoxRandom2Sum.AutoSize = true;
+            this.checkBoxRandom2Sum.Checked = true;
+            this.checkBoxRandom2Sum.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxRandom2Sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxRandom2Sum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
             this.checkBoxRandom2Sum.Location = new System.Drawing.Point(87, 119);
@@ -260,9 +267,32 @@ namespace matrices2
             this.checkBoxRandom2Sum.Text = "Random";
             this.checkBoxRandom2Sum.UseVisualStyleBackColor = true;
             // 
+            // buttonCreateSum
+            // 
+            this.buttonCreateSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
+            this.buttonCreateSum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonCreateSum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCreateSum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCreateSum.FlatAppearance.BorderSize = 0;
+            this.buttonCreateSum.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCreateSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCreateSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCreateSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCreateSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.buttonCreateSum.Location = new System.Drawing.Point(6, 231);
+            this.buttonCreateSum.Name = "buttonCreateSum";
+            this.buttonCreateSum.Size = new System.Drawing.Size(81, 40);
+            this.buttonCreateSum.TabIndex = 19;
+            this.buttonCreateSum.Text = "Create matrix";
+            this.buttonCreateSum.UseVisualStyleBackColor = false;
+            this.buttonCreateSum.Click += new System.EventHandler(this.buttonCreateSum_Click);
+            // 
             // checkBoxRandom1Sum
             // 
             this.checkBoxRandom1Sum.AutoSize = true;
+            this.checkBoxRandom1Sum.Checked = true;
+            this.checkBoxRandom1Sum.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxRandom1Sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxRandom1Sum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
             this.checkBoxRandom1Sum.Location = new System.Drawing.Point(87, 11);
@@ -288,7 +318,7 @@ namespace matrices2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.label2.Location = new System.Drawing.Point(30, 341);
+            this.label2.Location = new System.Drawing.Point(40, 320);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 24);
             this.label2.TabIndex = 24;
@@ -346,27 +376,6 @@ namespace matrices2
             this.label5.Size = new System.Drawing.Size(76, 24);
             this.label5.TabIndex = 30;
             this.label5.Text = "Column";
-            // 
-            // buttonCreateSum
-            // 
-            this.buttonCreateSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
-            this.buttonCreateSum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonCreateSum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCreateSum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonCreateSum.FlatAppearance.BorderSize = 0;
-            this.buttonCreateSum.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonCreateSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonCreateSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonCreateSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCreateSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.buttonCreateSum.Location = new System.Drawing.Point(6, 231);
-            this.buttonCreateSum.Name = "buttonCreateSum";
-            this.buttonCreateSum.Size = new System.Drawing.Size(81, 40);
-            this.buttonCreateSum.TabIndex = 19;
-            this.buttonCreateSum.Text = "Create matrix";
-            this.buttonCreateSum.UseVisualStyleBackColor = false;
-            this.buttonCreateSum.Click += new System.EventHandler(this.buttonCreateSum_Click);
             // 
             // label7
             // 
@@ -524,6 +533,14 @@ namespace matrices2
             0,
             0});
             // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 499);
+            this.splitter1.TabIndex = 19;
+            this.splitter1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,6 +548,7 @@ namespace matrices2
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(800, 499);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.splitter1);
             this.Name = "Form1";
             this.Text = "matrices";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsDeterminant)).EndInit();
@@ -575,6 +593,7 @@ namespace matrices2
         private System.Windows.Forms.CheckBox checkBoxRandomDeterminant;
         private System.Windows.Forms.CheckBox checkBoxRandom2Sum;
         private System.Windows.Forms.CheckBox checkBoxRandom1Sum;
+        private System.Windows.Forms.Splitter splitter1;
     }
 }
 

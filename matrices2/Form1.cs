@@ -265,6 +265,5 @@ namespace matrices2
 
         }
         #endregion
-
     }
 }
