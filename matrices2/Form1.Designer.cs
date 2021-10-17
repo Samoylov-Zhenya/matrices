@@ -230,6 +230,7 @@ namespace matrices2
             this.buttonRemoveSum.TabIndex = 23;
             this.buttonRemoveSum.Text = "Remove matrix";
             this.buttonRemoveSum.UseVisualStyleBackColor = true;
+            this.buttonRemoveSum.Click += new System.EventHandler(this.RemoveMatrix_Click);
             // 
             // buttonSum
             // 
@@ -240,6 +241,7 @@ namespace matrices2
             this.buttonSum.TabIndex = 22;
             this.buttonSum.Text = "Sum of matrices";
             this.buttonSum.UseVisualStyleBackColor = true;
+            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
             // 
             // label5
             // 
@@ -260,6 +262,7 @@ namespace matrices2
             this.buttonCreateSum.TabIndex = 19;
             this.buttonCreateSum.Text = "Create matrix";
             this.buttonCreateSum.UseVisualStyleBackColor = true;
+            this.buttonCreateSum.Click += new System.EventHandler(this.buttonCreateSum_Click);
             // 
             // label7
             // 

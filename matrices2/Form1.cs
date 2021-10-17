@@ -83,7 +83,6 @@ namespace matrices2
             }
 
         }
-
         #endregion
         #region --- Click Add Determinant ---
         private void CreateMatrix_Click(object sender, EventArgs e)
@@ -98,7 +97,16 @@ namespace matrices2
             }
         }
         #endregion
-        #region --- Click Add Determinant ---
+        #region --- Click Add Sum ---
+        private void buttonCreateSum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSum_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
         #region --- Determinant --- не работает 
         private void Determinant_Click(object sender, EventArgs e)
@@ -231,8 +239,9 @@ namespace matrices2
 
 
 
+
         #endregion
 
-        
+
     }
 }
