@@ -80,7 +80,7 @@ namespace matrices2
             }
         }
         #endregion
-        #region --- Determinant ---
+        #region --- Determinant --- не работает 
         private void Determinant_Click(object sender, EventArgs e)
         {
             int rows = classTextBox.rows;
@@ -143,6 +143,7 @@ namespace matrices2
         }
         #endregion
         #region --- Determinant2 ---
+        //этот метод определяет знак элементов
         //this method determines the sign of the elements
         static int SignOfElement(int i, int j)
         {
@@ -155,22 +156,23 @@ namespace matrices2
                 return -1;
             }
         }
+        //этот метод определяет подматрицу, соответствующую данному элементу
         //this method determines the sub matrix corresponding to a given element
-        static double[,] CreateSmallerMatrix(double[,] input, int i, int j)
+        static double[,] CreateSmallerMatrix(double[,] matrix, int column, int row)
         {
-            int order = int.Parse(System.Math.Sqrt(input.Length).ToString());
+            int order = int.Parse(System.Math.Sqrt(matrix.Length).ToString());
             double[,] output = new double[order - 1, order - 1];
             int x = 0, y = 0;
             for (int m = 0; m < order; m++, x++)
             {
-                if (m != i)
+                if (m != column)
                 {
                     y = 0;
                     for (int n = 0; n < order; n++)
                     {
-                        if (n != j)
+                        if (n != row)
                         {
-                            output[x, y] = input[m, n];
+                            output[x, y] = matrix[m, n];
                             y++;
                         }
                     }
@@ -182,27 +184,28 @@ namespace matrices2
             }
             return output;
         }
+        //этот метод определяет значение определителя с помощью рекурсии
         //this method determines the value of determinant using recursion
-        static double Determinant(double[,] input)
+        static double Determinant(double[,] matrix)
         {
-            int order = int.Parse(System.Math.Sqrt(input.Length).ToString());
+            int order = int.Parse(System.Math.Sqrt(matrix.Length).ToString());
             if (order > 2)
             {
                 double value = 0;
                 for (int j = 0; j < order; j++)
                 {
-                    double[,] Temp = CreateSmallerMatrix(input, 0, j);
-                    value = value + input[0, j] * (SignOfElement(0, j) * Determinant(Temp));
+                    double[,] Temp = CreateSmallerMatrix(matrix, 0, j);
+                    value = value + matrix[0, j] * (SignOfElement(0, j) * Determinant(Temp));
                 }
                 return value;
             }
             else if (order == 2)
             {
-                return ((input[0, 0] * input[1, 1]) - (input[1, 0] * input[0, 1]));
+                return ((matrix[0, 0] * matrix[1, 1]) - (matrix[1, 0] * matrix[0, 1]));
             }
             else
             {
-                return (input[0, 0]);
+                return (matrix[0, 0]);
             }
         }
         #endregion
