@@ -57,18 +57,7 @@ namespace matrices2
             }
         }*/
         #endregion
-        #region --- Click Add Remove ---
-        private void CreateMatrix_Click(object sender, EventArgs e)
-        {
-            RemoveMatrix_Click(sender, e);
-            int rows = (int)numericUpDownRowsDeterminant.Value;
-            DeterminantOfMatrix = new classTextBox(rows , checkBoxRandom.Checked);
-
-            foreach (var item in DeterminantOfMatrix.textBoxArr)
-            {
-                Controls.Add(item);
-            }
-        }
+        #region --- Click Remove ---
         private void RemoveMatrix_Click(object sender, EventArgs e)
         {
             if (DeterminantOfMatrix != null)
@@ -92,7 +81,27 @@ namespace matrices2
                     Controls.Remove(item);
                 }
             }
-            
+
+        }
+
+        #endregion
+        #region --- Click Add Determinant ---
+        private void CreateMatrix_Click(object sender, EventArgs e)
+        {
+            RemoveMatrix_Click(sender, e);
+            int rows = (int)numericUpDownRowsDeterminant.Value;
+            DeterminantOfMatrix = new classTextBox(rows , checkBoxRandom.Checked);
+
+            foreach (var item in DeterminantOfMatrix.textBoxArr)
+            {
+                Controls.Add(item);
+            }
+        }
+        #endregion
+        #region --- Click Add Determinant ---
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
         #region --- Determinant --- не работает 
@@ -226,9 +235,7 @@ namespace matrices2
 
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
+        
     }
 }
