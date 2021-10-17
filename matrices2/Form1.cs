@@ -61,8 +61,8 @@ namespace matrices2
         private void CreateMatrix_Click(object sender, EventArgs e)
         {
             RemoveMatrix_Click(sender, e);
-            int rows = (int)numericUpDown1.Value;
-            DeterminantOfMatrix = new classTextBox(rows);
+            int rows = (int)numericUpDownRowsDeterminant.Value;
+            DeterminantOfMatrix = new classTextBox(rows , checkBoxRandom.Checked);
 
             foreach (var item in DeterminantOfMatrix.textBoxArr)
             {
@@ -95,7 +95,7 @@ namespace matrices2
 
             //TriangularMtrixView(ref matrix);
             //labelDeterminant.Text = "Determinant" + Convert.ToString(DeterminantComputationPrint(ref matrix));
-            labelDeterminant.Text = "Determinant" + Convert.ToString(Determinant(matrix));
+            labelDeterminant.Text = "Determinant: " + Convert.ToString(Determinant(matrix));
             Console.WriteLine(Determinant(matrix));
         }
         private double DeterminantComputationPrint(ref double[,] matrix)

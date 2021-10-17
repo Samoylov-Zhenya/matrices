@@ -12,14 +12,14 @@ namespace matrices2
     {
         static public int rows { get; set; }
         static public int columns { get; set; }
-        
+
         public TextBox[,] textBoxArr;
         #region --- constructor конструктор ---
-        public classTextBox(int rows)
+        public classTextBox(int rows, bool random)
         {
             classTextBox.rows = rows;
             textBoxArr = new TextBox[rows, rows];
-            creatingDisplayingTextBox();
+            creatingDisplayingTextBox(random);
         }
         public classTextBox(int rows, int columns)
         {
@@ -32,7 +32,7 @@ namespace matrices2
 
         #region --- methods методы ---
         //создание и вывод Text Box
-        void creatingDisplayingTextBox()
+        void creatingDisplayingTextBox(bool random = false)
         {
             var rand = new Random();
             for (int i = 0; i < rows; i++)
@@ -44,7 +44,7 @@ namespace matrices2
                         Location = new Point(i * 50 + 70, k * 20 + 30),
                         Name = "textBox2" + i * k,
                         Size = new Size(50, 20),
-                        Text = Convert.ToString(rand.Next(10)),
+                        Text = random == true ? Convert.ToString(rand.Next(10)) : "",
                         TabIndex = 0
                     };
                 }
