@@ -20,9 +20,11 @@ namespace matrices2
         }
         #endregion
         #region --- Class ---
-        
-        classTextBox classTextBoxArr;
-        class classTextBox
+        classTextBox DeterminantOfMatrix;
+        classTextBox sumOfMatrix1;
+        classTextBox sumOfMatrix2;
+
+        /*class classTextBox
         {
             static public int rows { get; set; }
             //static public int columns { get; set; }
@@ -53,27 +55,27 @@ namespace matrices2
                     }
                 }
             }
-        }
+        }*/
         #endregion
         #region --- Click Add Remove ---
         private void CreateMatrix_Click(object sender, EventArgs e)
         {
             RemoveMatrix_Click(sender, e);
             int rows = (int)numericUpDown1.Value;
-            classTextBoxArr = new classTextBox(rows);
+            DeterminantOfMatrix = new classTextBox(rows);
 
-            foreach (var item in classTextBoxArr.textBoxArr)
+            foreach (var item in DeterminantOfMatrix.textBoxArr)
             {
                 Controls.Add(item);
             }
         }
         private void RemoveMatrix_Click(object sender, EventArgs e)
         {
-            if (classTextBoxArr == null)
+            if (DeterminantOfMatrix == null)
             {
                 return;
             }
-            foreach (var item in classTextBoxArr.textBoxArr)
+            foreach (var item in DeterminantOfMatrix.textBoxArr)
             {
                 Controls.Remove(item);
                 //Controls.Add(item);
@@ -88,7 +90,7 @@ namespace matrices2
 
             for (int i = 0; i < rows; i++)
                 for (int k = 0; k < rows; k++)
-                    matrix[i, k] = Convert.ToDouble(classTextBoxArr.textBoxArr[k, i].Text);
+                    matrix[i, k] = Convert.ToDouble(DeterminantOfMatrix.textBoxArr[k, i].Text);
 
 
             //TriangularMtrixView(ref matrix);
@@ -208,6 +210,12 @@ namespace matrices2
                 return (matrix[0, 0]);
             }
         }
+
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
