@@ -12,7 +12,9 @@ namespace matrices2
 {
     public partial class Form1 : Form
     {
-        
+        #region ---  ---
+        #endregion
+
         #region --- Form ---
         public Form1()
         {
@@ -89,7 +91,7 @@ namespace matrices2
         {
             RemoveMatrix_Click(sender, e);
             int rows = (int)numericUpDownRowsDeterminant.Value;
-            DeterminantOfMatrix = new classTextBox(rows , checkBoxRandom.Checked);
+            DeterminantOfMatrix = new classTextBox(rows , checkBoxRandomDeterminant.Checked);
 
             foreach (var item in DeterminantOfMatrix.textBoxArr)
             {
@@ -100,7 +102,25 @@ namespace matrices2
         #region --- Click Add Sum ---
         private void buttonCreateSum_Click(object sender, EventArgs e)
         {
+            RemoveMatrix_Click(sender, e);
+            #region --- rows and column---
+            int rows1 = (int)numericUpDownRowsSum1.Value;
+            int column1 = (int)numericUpDownColumnSum1.Value;
 
+            int rows2 = (int)numericUpDownRowsSum2.Value;
+            int column2 = (int)numericUpDownColumnSum2.Value;
+            #endregion
+            sumOfMatrix1 = new classTextBox(rows1, column1, checkBoxRandom1Sum.Checked, 1);
+            sumOfMatrix2 = new classTextBox(rows2, column2, checkBoxRandom2Sum.Checked, 2);
+
+            foreach (var item in sumOfMatrix1.textBoxArr)
+            {
+                Controls.Add(item);
+            }
+            foreach (var item in sumOfMatrix2.textBoxArr)
+            {
+                Controls.Add(item);
+            }
         }
 
         private void buttonSum_Click(object sender, EventArgs e)

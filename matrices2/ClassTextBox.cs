@@ -15,18 +15,18 @@ namespace matrices2
 
         public TextBox[,] textBoxArr;
         #region --- constructor конструктор ---
-        public classTextBox(int rows, bool random)
+        public classTextBox(int rows, bool random)//determ
         {
             classTextBox.rows = rows;
             textBoxArr = new TextBox[rows, rows];
             creatingDisplayingTextBox(random);
         }
-        public classTextBox(int rows, int columns)
+        public classTextBox(int rows, int columns, bool random, int matrixNumber)//sum
         {
             classTextBox.rows = rows;
             classTextBox.columns = columns;
-            textBoxArr = new TextBox[rows, rows];
-            creatingDisplayingTextBox();
+            textBoxArr = new TextBox[columns, rows];
+            creatingDisplayingTextBoxSum(matrixNumber, random);
         }
         #endregion
 
@@ -42,6 +42,24 @@ namespace matrices2
                     textBoxArr[i, k] = new System.Windows.Forms.TextBox
                     {
                         Location = new Point(i * 50 + 70, k * 20 + 30),
+                        Name = "textBox2" + i * k,
+                        Size = new Size(50, 20),
+                        Text = random == true ? Convert.ToString(rand.Next(10)) : "",
+                        TabIndex = 0
+                    };
+                }
+            }
+        }
+        void creatingDisplayingTextBoxSum(int matrixNumber, bool random = false)
+        {
+            var rand = new Random();
+            for (int i = 0; i < columns; i++)
+            {
+                for (int k = 0; k < rows; k++)
+                {
+                    textBoxArr[i, k] = new System.Windows.Forms.TextBox
+                    {
+                        Location = new Point(i * 50 + 70, matrixNumber == 1 ? k * 20 + 30 : k * 20 + 260),
                         Name = "textBox2" + i * k,
                         Size = new Size(50, 20),
                         Text = random == true ? Convert.ToString(rand.Next(10)) : "",
