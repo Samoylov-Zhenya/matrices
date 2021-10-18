@@ -86,6 +86,7 @@ namespace matrices2
 
         }
         #endregion
+        
         #region --- Click Add (Determinant) ---
         private void CreateMatrix_Click(object sender, EventArgs e)
         {
@@ -99,32 +100,20 @@ namespace matrices2
             }
         }
         #endregion
-        #region --- Click Add (Sum) ---
-        private void buttonCreateSum_Click(object sender, EventArgs e)
+        #region --- Determinant Click---
+        private void buttonDeterminant_Click(object sender, EventArgs e)
         {
-            RemoveMatrix_Click(sender, e);
-            #region --- rows and column---
-            int rows1 = (int)numericUpDownRowsSum1.Value;
-            int column1 = (int)numericUpDownColumnSum1.Value;
+            int rows = classTextBox.rows;
+            double[,] matrix = new double[rows, rows];
 
-            int rows2 = (int)numericUpDownRowsSum2.Value;
-            int column2 = (int)numericUpDownColumnSum2.Value;
-            #endregion
-            sumOfMatrix1 = new classTextBox(rows1, column1, checkBoxRandom1Sum.Checked, 1);
-            sumOfMatrix2 = new classTextBox(rows2, column2, checkBoxRandom2Sum.Checked, 2);
+            for (int i = 0; i < rows; i++)
+                for (int k = 0; k < rows; k++)
+                    matrix[i, k] = Convert.ToDouble(DeterminantOfMatrix.textBoxArr[k, i].Text);
 
-            foreach (var item in sumOfMatrix1.textBoxArr)
-            {
-                Controls.Add(item);
-            }
-            foreach (var item in sumOfMatrix2.textBoxArr)
-            {
-                Controls.Add(item);
-            }
+            labelDeterminant.Text = "Determinant: " + Convert.ToString(Determinant(matrix));
+            Console.WriteLine(Determinant(matrix));
         }
-
         #endregion
-
         #region --- Determinant ---
         //этот метод определяет знак элементов
         //this method determines the sign of the elements
@@ -192,16 +181,39 @@ namespace matrices2
             }
         }
 
-
-
-
-
         #endregion
+        
         #region --- Sum ---
         private void buttonSum_Click(object sender, EventArgs e)
         {
 
         }
         #endregion
+        #region --- Click Add (Sum) ---
+        private void buttonCreateSum_Click(object sender, EventArgs e)
+        {
+            RemoveMatrix_Click(sender, e);
+            #region --- rows and column---
+            int rows1 = (int)numericUpDownRowsSum1.Value;
+            int column1 = (int)numericUpDownColumnSum1.Value;
+
+            int rows2 = (int)numericUpDownRowsSum2.Value;
+            int column2 = (int)numericUpDownColumnSum2.Value;
+            #endregion
+            sumOfMatrix1 = new classTextBox(rows1, column1, checkBoxRandom1Sum.Checked, 1);
+            sumOfMatrix2 = new classTextBox(rows2, column2, checkBoxRandom2Sum.Checked, 2);
+
+            foreach (var item in sumOfMatrix1.textBoxArr)
+            {
+                Controls.Add(item);
+            }
+            foreach (var item in sumOfMatrix2.textBoxArr)
+            {
+                Controls.Add(item);
+            }
+        }
+
+        #endregion
+
     }
 }

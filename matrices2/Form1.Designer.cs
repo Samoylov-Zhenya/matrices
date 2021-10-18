@@ -117,7 +117,7 @@ namespace matrices2
             this.buttonDeterminant.TabIndex = 15;
             this.buttonDeterminant.Text = "Determinant of the matrix";
             this.buttonDeterminant.UseVisualStyleBackColor = false;
-            //this.buttonDeterminant.Click += new System.EventHandler(this.Determinant_Click);
+            this.buttonDeterminant.Click += new System.EventHandler(this.buttonDeterminant_Click);
             // 
             // label1
             // 
