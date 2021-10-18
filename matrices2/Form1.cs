@@ -124,70 +124,8 @@ namespace matrices2
         }
 
         #endregion
-        /////////////////////////////////////////////////////////////////
-        #region --- Determinant --- не работает 
-        private void Determinant_Click(object sender, EventArgs e)
-        {
-            int rows = classTextBox.rows;
-            double[,] matrix = new double[rows, rows];
 
-            for (int i = 0; i < rows; i++)
-                for (int k = 0; k < rows; k++)
-                    matrix[i, k] = Convert.ToDouble(DeterminantOfMatrix.textBoxArr[k, i].Text);
-
-
-            //TriangularMtrixView(ref matrix);
-            //labelDeterminant.Text = "Determinant" + Convert.ToString(DeterminantComputationPrint(ref matrix));
-            labelDeterminant.Text = "Determinant: " + Convert.ToString(Determinant(matrix));
-            Console.WriteLine(Determinant(matrix));
-        }
-        private double DeterminantComputationPrint(ref double[,] matrix)
-        {
-            double Determinant = 1;
-            int rows = (int)Math.Sqrt(matrix.Length);
-            for (int i = 0; i < rows; i++)
-            {
-                Determinant *= matrix[i, i];
-            }
-            return Determinant;
-        }
-        private void TriangularMtrixView(ref double[,] matrix)
-        {
-            int rows = (int)Math.Sqrt(matrix.Length);
-            double[,] matrixReturn = new double[rows, rows];
-            #region --- Filling the array ---
-            //заполнение массива
-            for (int i = 0; i < rows; i++)
-            {
-                for (int k = 0; k < rows; k++)
-                {
-                    matrixReturn[i, k] = matrix[i, k];
-                }
-            }
-
-            #endregion
-            double kq;
-            for (int i = 0; i < rows-1; i++)
-            {
-                kq = matrixReturn[i + 1, i] / matrixReturn[i, i];
-                for (int n = 0; n < rows; n++)
-                {
-                    matrixReturn[i + 1, n] = matrixReturn[i + 1, n] - matrixReturn[i, n] * kq;
-                    //matrixReturn[n, i + 1] = matrixReturn[n, i + 1] - matrixReturn[n, i] * kq;
-                    //matrix[i, n] = Convert.ToDouble(classTextBoxArr.textBoxArr[i, n].Text);
-                }
-            }
-            for (int i = 0; i < rows; i++)
-            {
-                for (int k = 0; k < rows; k++)
-                {
-                    matrix[i, k] = matrixReturn[i, k];
-                }
-            }
-            return;
-        }
-        #endregion
-        #region --- Determinant2 ---
+        #region --- Determinant ---
         //этот метод определяет знак элементов
         //this method determines the sign of the elements
         static int SignOfElement(int i, int j)
