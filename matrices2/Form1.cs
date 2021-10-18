@@ -86,13 +86,13 @@ namespace matrices2
 
         }
         #endregion
-        
+
         #region --- Click Add (Determinant) ---
         private void CreateMatrix_Click(object sender, EventArgs e)
         {
             RemoveMatrix_Click(sender, e);
             int rows = (int)numericUpDownRowsDeterminant.Value;
-            DeterminantOfMatrix = new classTextBox(rows , checkBoxRandomDeterminant.Checked);
+            DeterminantOfMatrix = new classTextBox(rows, checkBoxRandomDeterminant.Checked);
 
             foreach (var item in DeterminantOfMatrix.textBoxArr)
             {
@@ -103,7 +103,7 @@ namespace matrices2
         #region --- Determinant Click---
         private void buttonDeterminant_Click(object sender, EventArgs e)
         {
-            int rows = classTextBox.rows;
+            int rows = DeterminantOfMatrix.rows;
             double[,] matrix = new double[rows, rows];
 
             for (int i = 0; i < rows; i++)
@@ -182,7 +182,7 @@ namespace matrices2
         }
 
         #endregion
-        
+
         #region --- Sum ---
         private void buttonSum_Click(object sender, EventArgs e)
         {
@@ -200,9 +200,11 @@ namespace matrices2
             int rows2 = (int)numericUpDownRowsSum2.Value;
             int column2 = (int)numericUpDownColumnSum2.Value;
             #endregion
+
             sumOfMatrix1 = new classTextBox(rows1, column1, checkBoxRandom1Sum.Checked, 1);
             sumOfMatrix2 = new classTextBox(rows2, column2, checkBoxRandom2Sum.Checked, 2);
 
+            #region --- Add TextBox on form ---
             foreach (var item in sumOfMatrix1.textBoxArr)
             {
                 Controls.Add(item);
@@ -211,6 +213,8 @@ namespace matrices2
             {
                 Controls.Add(item);
             }
+            #endregion
+            Console.WriteLine();
         }
 
         #endregion
