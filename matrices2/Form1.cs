@@ -22,9 +22,9 @@ namespace matrices2
         }
         #endregion
         #region --- Class ---
-        classTextBox DeterminantOfMatrix;
-        classTextBox sumOfMatrix1;
-        classTextBox sumOfMatrix2;
+        ClassTextBox DeterminantOfMatrix;
+        ClassTextBox sumOfMatrix1;
+        ClassTextBox sumOfMatrix2;
 
         /*class classTextBox
         {
@@ -92,12 +92,9 @@ namespace matrices2
         {
             RemoveMatrix_Click(sender, e);
             int rows = (int)numericUpDownRowsDeterminant.Value;
-            DeterminantOfMatrix = new classTextBox(rows, checkBoxRandomDeterminant.Checked);
+            DeterminantOfMatrix = new ClassTextBox(rows, checkBoxRandomDeterminant.Checked);
 
-            foreach (var item in DeterminantOfMatrix.textBoxArr)
-            {
-                Controls.Add(item);
-            }
+            Adds(DeterminantOfMatrix);
         }
         #endregion
         #region --- Determinant Click---
@@ -186,10 +183,52 @@ namespace matrices2
         #region --- Sum ---
         private void buttonSum_Click(object sender, EventArgs e)
         {
+            #region --- rows and column---
+            int rows1 = (int)numericUpDownRowsSum1.Value;
+            int column1 = (int)numericUpDownColumnSum1.Value;
 
+            int rows2 = (int)numericUpDownRowsSum2.Value;
+            int column2 = (int)numericUpDownColumnSum2.Value;
+            #endregion
+            if (rows1 != rows2 || column1 != column2)
+            {
+                MessageBox.Show(
+                "НЕ ВСЕ МАТРИЦЫ МОЖНО СКЛАДЫВАТЬ. \n Для выполнения сложения матриц, необходимо, чтобы они были ОДИНАКОВЫМИ ПО РАЗМЕРУ.",
+                 "Сообщение",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
+                return;
+            }
+            RemoveMatrix_Click(sender, e);
+            Sum();
+        }
+        private void Sum()
+        {
+            int rows1 = (int)numericUpDownRowsSum1.Value;
+            int column1 = (int)numericUpDownColumnSum1.Value;
+
+            for (int i = 0; i < rows1; i++)
+            {
+                for (int k = 0; k < column1; k++)
+                {
+                    sumOfMatrix1.textBoxArr[i, k].Text = Convert.ToString(
+                        int.Parse(sumOfMatrix1.textBoxArr[i, k].Text) +
+                        int.Parse(sumOfMatrix2.textBoxArr[i, k].Text)
+                        );
+                }
+            }
+            Adds(sumOfMatrix1);
         }
         #endregion
-        #region --- Click Add (Sum) ---
+        #region --- textBox Add (Sum) ---
+        private void Adds(ClassTextBox classTextBox)
+        {
+            foreach (var item in classTextBox.textBoxArr)
+            {
+                Controls.Add(item);
+            }
+        }
         private void buttonCreateSum_Click(object sender, EventArgs e)
         {
             RemoveMatrix_Click(sender, e);
@@ -201,22 +240,15 @@ namespace matrices2
             int column2 = (int)numericUpDownColumnSum2.Value;
             #endregion
 
-            sumOfMatrix1 = new classTextBox(rows1, column1, checkBoxRandom1Sum.Checked, 1);
-            sumOfMatrix2 = new classTextBox(rows2, column2, checkBoxRandom2Sum.Checked, 2);
+            sumOfMatrix1 = new ClassTextBox(rows1, column1, checkBoxRandom1Sum.Checked, 1);
+            sumOfMatrix2 = new ClassTextBox(rows2, column2, checkBoxRandom2Sum.Checked, 2);
 
             #region --- Add TextBox on form ---
-            foreach (var item in sumOfMatrix1.textBoxArr)
-            {
-                Controls.Add(item);
-            }
-            foreach (var item in sumOfMatrix2.textBoxArr)
-            {
-                Controls.Add(item);
-            }
+            Adds(sumOfMatrix1);
+            Adds(sumOfMatrix2);
             #endregion
             Console.WriteLine();
         }
-
         #endregion
 
     }

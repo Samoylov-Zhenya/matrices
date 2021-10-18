@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace matrices2
 {
-    class classTextBox
+    class ClassTextBox
     {
         public int rows { get; set; }
         public int columns { get; set; }
@@ -16,13 +16,13 @@ namespace matrices2
         public TextBox[,] textBoxArr;
 
         #region --- constructor конструктор ---
-        public classTextBox(int rows, bool random)//determ
+        public ClassTextBox(int rows, bool random)//determ
         {
             this.rows = rows;
             textBoxArr = new TextBox[rows, rows];
             creatingDisplayingTextBox(random);
         }
-        public classTextBox(int rows, int columns, bool random, int matrixNumber)//sum
+        public ClassTextBox(int rows, int columns, bool random, int matrixNumber)//sum
         {
             this.rows = rows;
             this.columns = columns;
@@ -42,9 +42,12 @@ namespace matrices2
                 {
                     textBoxArr[i, k] = new System.Windows.Forms.TextBox
                     {
-                        Location = new Point(i * 50 + 70, k * 20 + 30),
-                        Name = "textBox2" + i * k,
+                        Location = new Point(i * 51 + 70, k * 14 + 30),
+                        
+                        BorderStyle = BorderStyle.None,
                         Size = new Size(50, 20),
+                        BackColor = Color.Silver,
+                        TextAlign = HorizontalAlignment.Center,
                         Text = random == true ? Convert.ToString(rand.Next(10)) : "",
                         TabIndex = 0
                     };
@@ -60,8 +63,12 @@ namespace matrices2
                 {
                     textBoxArr[i, k] = new System.Windows.Forms.TextBox
                     {
-                        Location = new Point(k * 50 + 70, matrixNumber == 1 ? i * 20 + 30 : i * 20 + 260),
+                        Location = new Point(k * 51 + 70, matrixNumber == 1 ? i * 14 + 30 : 
+                                                                              i * 14 + 260),
+                        BorderStyle = BorderStyle.None,
                         Size = new Size(50, 20),
+                        BackColor = Color.Silver,
+                        TextAlign = HorizontalAlignment.Center,
                         Text = random == true ? Convert.ToString(rand.Next(10)) : "",
                         TabIndex = 0
                     };
