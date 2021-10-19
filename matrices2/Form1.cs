@@ -23,8 +23,8 @@ namespace matrices2
         #endregion
         #region --- ссылки на классы Class ---
         ClassTextBox DeterminantOfMatrix;
-        ClassTextBox sumOfMatrix1;
-        ClassTextBox sumOfMatrix2;
+        ClassTextBox Matrix1;
+        ClassTextBox Matrix2;
         #endregion
         #region --- удаление матриц Click Remove ---
         private void RemoveMatrix_Click(object sender, EventArgs e)
@@ -36,16 +36,16 @@ namespace matrices2
                     Controls.Remove(item);
                 }
             }
-            if (sumOfMatrix1 != null)
+            if (Matrix1 != null)
             {
-                foreach (var item in sumOfMatrix1.textBoxArr)
+                foreach (var item in Matrix1.textBoxArr)
                 {
                     Controls.Remove(item);
                 }
             }
-            if (sumOfMatrix2 != null)
+            if (Matrix2 != null)
             {
-                foreach (var item in sumOfMatrix2.textBoxArr)
+                foreach (var item in Matrix2.textBoxArr)
                 {
                     Controls.Remove(item);
                 }
@@ -153,47 +153,73 @@ namespace matrices2
         #endregion
 
         #region --- Sum ---
+        private void comboBoxOperations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Sum of matrices
+            switch (comboBoxOperations.Text)
+            {
+                case "+":
+                    buttonSum.Text = "Sum of matrices";
+                    break;
+
+                default:
+                    buttonSum.Text = "Difference of matrices";
+                    break;
+            }
+        }
+
         #region --- button Sum ---
         private void buttonSum_Click(object sender, EventArgs e)
         {
             #region --- rows and column---
-            int rows1 = (int)numericUpDownRowsSum1.Value;
-            int column1 = (int)numericUpDownColumnSum1.Value;
-
-            int rows2 = (int)numericUpDownRowsSum2.Value;
-            int column2 = (int)numericUpDownColumnSum2.Value;
+            int rows = (int)numericUpDownRowsSum1.Value;
+            int column = (int)numericUpDownColumnSum1.Value;
             #endregion
-            if (rows1 != rows2 || column1 != column2)
-            {
-                MessageBox.Show(
-                "НЕ ВСЕ МАТРИЦЫ МОЖНО СКЛАДЫВАТЬ. \n Для выполнения сложения матриц, необходимо, чтобы они были ОДИНАКОВЫМИ ПО РАЗМЕРУ.",
-                 "Сообщение",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1);
-                return;
-            }
+
             RemoveMatrix_Click(sender, e);
-            Sum();
+            switch (comboBoxOperations.Text)
+            {
+                case "+":
+                    sum(rows, column);
+                    break;
+
+                default:
+                    difference(rows, column);
+                    break;
+            }
         }
         #endregion
-        #region --- алгоритм ---
-        private void Sum()
+        #region --- действия ---
+        private void difference(int rows, int column)
         {
-            int rows1 = (int)numericUpDownRowsSum1.Value;
-            int column1 = (int)numericUpDownColumnSum1.Value;
-
-            for (int i = 0; i < rows1; i++)
+            for (int i = 0; i < rows; i++)
             {
-                for (int k = 0; k < column1; k++)
+                for (int k = 0; k < column; k++)
                 {
-                    sumOfMatrix1.textBoxArr[i, k].Text = Convert.ToString(
-                        int.Parse(sumOfMatrix1.textBoxArr[i, k].Text) +
-                        int.Parse(sumOfMatrix2.textBoxArr[i, k].Text)
+                    Matrix1.textBoxArr[i, k].Text =
+                        Convert.ToString(
+                        int.Parse(Matrix1.textBoxArr[i, k].Text) -
+                        int.Parse(Matrix2.textBoxArr[i, k].Text)
                         );
                 }
             }
-            Adds(sumOfMatrix1);
+            Console.WriteLine();
+            Adds(Matrix1);
+        }
+        private void sum(int rows, int column)
+        {
+            for (int i = 0; i < rows; i++)
+            {
+                for (int k = 0; k < column; k++)
+                {
+                    Matrix1.textBoxArr[i, k].Text = Convert.ToString(
+                        int.Parse(Matrix1.textBoxArr[i, k].Text) +
+                        int.Parse(Matrix2.textBoxArr[i, k].Text)
+                        );
+                }
+            }
+            Console.WriteLine();
+            Adds(Matrix1);
         }
         #endregion
         #region --- textBox Add (Sum) ---
@@ -201,19 +227,16 @@ namespace matrices2
         {
             RemoveMatrix_Click(sender, e);
             #region --- rows and column---
-            int rows1 = (int)numericUpDownRowsSum1.Value;
-            int column1 = (int)numericUpDownColumnSum1.Value;
-
-            int rows2 = (int)numericUpDownRowsSum2.Value;
-            int column2 = (int)numericUpDownColumnSum2.Value;
+            int rows = (int)numericUpDownRowsSum1.Value;
+            int column = (int)numericUpDownColumnSum1.Value;
             #endregion
 
-            sumOfMatrix1 = new ClassTextBox(rows1, column1, checkBoxRandom1Sum.Checked, 1);
-            sumOfMatrix2 = new ClassTextBox(rows2, column2, checkBoxRandom2Sum.Checked, 2);
+            Matrix1 = new ClassTextBox(rows, column, checkBoxRandom1Sum.Checked, 1);
+            Matrix2 = new ClassTextBox(rows, column, checkBoxRandom2Sum.Checked, 2);
 
             #region --- Add TextBox on form ---
-            Adds(sumOfMatrix1);
-            Adds(sumOfMatrix2);
+            Adds(Matrix1);
+            Adds(Matrix2);
             #endregion
             Console.WriteLine();
         }
@@ -229,5 +252,6 @@ namespace matrices2
             }
         }
         #endregion
+
     }
 }
