@@ -21,45 +21,12 @@ namespace matrices2
             InitializeComponent();
         }
         #endregion
-        #region --- Class ---
+        #region --- ссылки на классы Class ---
         ClassTextBox DeterminantOfMatrix;
         ClassTextBox sumOfMatrix1;
         ClassTextBox sumOfMatrix2;
-
-        /*class classTextBox
-        {
-            static public int rows { get; set; }
-            //static public int columns { get; set; }
-            public TextBox[,] textBoxArr;
-            public classTextBox(int rows)
-            {
-                classTextBox.rows = rows;
-                textBoxArr = new TextBox[rows, rows];
-                creatingDisplayingTextBox();
-
-            }
-            //создание и вывод Text Box
-            void creatingDisplayingTextBox()
-            {
-                var rand = new Random();
-                for (int i = 0; i < rows; i++)
-                {
-                    for (int k = 0; k < rows; k++)
-                    {
-                        textBoxArr[i, k] = new System.Windows.Forms.TextBox
-                        {
-                            Location = new Point(i * 50 + 70, k * 20 + 30),
-                            Name = "textBox2" + i * k,
-                            Size = new Size(50, 20),
-                            Text = Convert.ToString(rand.Next(10)),
-                            TabIndex = 0
-                        };
-                    }
-                }
-            }
-        }*/
         #endregion
-        #region --- Click Remove ---
+        #region --- удаление матриц Click Remove ---
         private void RemoveMatrix_Click(object sender, EventArgs e)
         {
             if (DeterminantOfMatrix != null)
@@ -83,12 +50,11 @@ namespace matrices2
                     Controls.Remove(item);
                 }
             }
-
         }
         #endregion
 
-        #region --- Click Add (Determinant) ---
-        private void CreateMatrix_Click(object sender, EventArgs e)
+        #region --- добавить на экран матрицу Click Add (Determinant) ---
+        private void buttonCreateMatrix_Click(object sender, EventArgs e)
         {
             RemoveMatrix_Click(sender, e);
             int rows = (int)numericUpDownRowsDeterminant.Value;
@@ -97,21 +63,26 @@ namespace matrices2
             Adds(DeterminantOfMatrix);
         }
         #endregion
-        #region --- Determinant Click---
+        #region --- алгоритм Determinant ---
+        #region --- Determinant button Click---
         private void buttonDeterminant_Click(object sender, EventArgs e)
         {
             int rows = DeterminantOfMatrix.rows;
             double[,] matrix = new double[rows, rows];
 
             for (int i = 0; i < rows; i++)
+            {
                 for (int k = 0; k < rows; k++)
+                {
                     matrix[i, k] = Convert.ToDouble(DeterminantOfMatrix.textBoxArr[k, i].Text);
+                }
+            }
 
             labelDeterminant.Text = "Determinant: " + Convert.ToString(Determinant(matrix));
             Console.WriteLine(Determinant(matrix));
         }
         #endregion
-        #region --- Determinant ---
+        #region ---  ---
         //этот метод определяет знак элементов
         //this method determines the sign of the elements
         static int SignOfElement(int i, int j)
@@ -177,6 +148,8 @@ namespace matrices2
                 return (matrix[0, 0]);
             }
         }
+        #endregion
+
 
         #endregion
 
@@ -222,13 +195,6 @@ namespace matrices2
         }
         #endregion
         #region --- textBox Add (Sum) ---
-        private void Adds(ClassTextBox classTextBox)
-        {
-            foreach (var item in classTextBox.textBoxArr)
-            {
-                Controls.Add(item);
-            }
-        }
         private void buttonCreateSum_Click(object sender, EventArgs e)
         {
             RemoveMatrix_Click(sender, e);
@@ -250,6 +216,14 @@ namespace matrices2
             Console.WriteLine();
         }
         #endregion
-
+        #region --- Adds ---
+        private void Adds(ClassTextBox classTextBox)
+        {
+            foreach (var item in classTextBox.textBoxArr)
+            {
+                Controls.Add(item);
+            }
+        }
+        #endregion
     }
 }
