@@ -53,6 +53,8 @@ namespace matrices2
         }
         #endregion
 
+
+        #region --- Determinant ---
         #region --- добавить на экран матрицу Click Add (Determinant) ---
         private void buttonCreateMatrix_Click(object sender, EventArgs e)
         {
@@ -63,7 +65,6 @@ namespace matrices2
             Adds(DeterminantOfMatrix);
         }
         #endregion
-        #region --- алгоритм Determinant ---
         #region --- Determinant button Click---
         private void buttonDeterminant_Click(object sender, EventArgs e)
         {
@@ -82,7 +83,7 @@ namespace matrices2
             Console.WriteLine(Determinant(matrix));
         }
         #endregion
-        #region ---  ---
+        #region --- алгоритм ---
         //этот метод определяет знак элементов
         //this method determines the sign of the elements
         static int SignOfElement(int i, int j)
@@ -149,11 +150,10 @@ namespace matrices2
             }
         }
         #endregion
-
-
         #endregion
 
         #region --- Sum ---
+        #region --- button Sum ---
         private void buttonSum_Click(object sender, EventArgs e)
         {
             #region --- rows and column---
@@ -176,6 +176,8 @@ namespace matrices2
             RemoveMatrix_Click(sender, e);
             Sum();
         }
+        #endregion
+        #region --- алгоритм ---
         private void Sum()
         {
             int rows1 = (int)numericUpDownRowsSum1.Value;
@@ -216,6 +218,8 @@ namespace matrices2
             Console.WriteLine();
         }
         #endregion
+        #endregion
+
         #region --- Adds ---
         private void Adds(ClassTextBox classTextBox)
         {
