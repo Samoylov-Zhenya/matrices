@@ -68,6 +68,13 @@ namespace matrices2
         #region --- Determinant button Click---
         private void buttonDeterminant_Click(object sender, EventArgs e)
         {
+            if (DeterminantOfMatrix == null)
+            {
+                messageBox("МАТРИЦА НЕ СОЗДАНА");
+                return;
+            }
+
+
             int rows = DeterminantOfMatrix.rows;
             double[,] matrix = new double[rows, rows];
 
@@ -171,6 +178,11 @@ namespace matrices2
         #region --- button Sum ---
         private void buttonSum_Click(object sender, EventArgs e)
         {
+            if (Matrix1 == null || Matrix2 == null)
+            {
+                messageBox("МАТРИЦЫ НЕ СОЗДАНЫ");
+                return;
+            }
             #region --- rows and column---
             int rows = (int)numericUpDownRowsSum1.Value;
             int column = (int)numericUpDownColumnSum1.Value;
@@ -243,9 +255,21 @@ namespace matrices2
         #endregion
         #endregion
 
-        #region --- Adds ---
+        #region --- functions ---
+        private void messageBox(string message)
+        {
+            MessageBox.Show(
+                message,
+                 "Сообщение",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1
+                );
+        }
         private void Adds(ClassTextBox classTextBox)
         {
+            Controls.Add(classTextBox.label);
+
             foreach (var item in classTextBox.textBoxArr)
             {
                 Controls.Add(item);

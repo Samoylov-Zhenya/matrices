@@ -13,6 +13,7 @@ namespace matrices2
         public int rows { get; set; }
         public int columns { get; set; }
 
+        public Label label { get; set; }
         public TextBox[,] textBoxArr;
 
         #region --- constructor конструктор ---
@@ -32,7 +33,7 @@ namespace matrices2
         #endregion
 
         #region --- methods методы ---
-        //создание и вывод Text Box
+        //создание Text Box
         void creatingDisplayingTextBox(bool random = false)
         {
             var rand = new Random();
@@ -43,7 +44,7 @@ namespace matrices2
                     textBoxArr[i, k] = new System.Windows.Forms.TextBox
                     {
                         Location = new Point(i * 51 + 70, k * 14 + 30),
-                        
+
                         BorderStyle = BorderStyle.None,
                         Size = new Size(50, 20),
                         BackColor = Color.Silver,
@@ -57,13 +58,21 @@ namespace matrices2
         void creatingDisplayingTextBoxSum(int matrixNumber, bool random = false)
         {
             var rand = new Random();
-            for (int i = 0; i < rows ; i++)
+            label = new Label
+            {
+                Text = "M" + matrixNumber,
+                Location = new Point(20, matrixNumber == 1 ? 24 : 254),
+                Font = new Font("Microsoft Sans Serif", 14),
+                ForeColor = Color.FromArgb(144, 155, 169),
+                Size = new Size(50, 20),
+            };
+            for (int i = 0; i < rows; i++)
             {
                 for (int k = 0; k < columns; k++)
                 {
                     textBoxArr[i, k] = new System.Windows.Forms.TextBox
                     {
-                        Location = new Point(k * 51 + 70, matrixNumber == 1 ? i * 14 + 30 : 
+                        Location = new Point(k * 51 + 70, matrixNumber == 1 ? i * 14 + 30 :
                                                                               i * 14 + 260),
                         BorderStyle = BorderStyle.None,
                         Size = new Size(50, 20),
