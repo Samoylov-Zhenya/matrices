@@ -22,16 +22,15 @@ namespace matrices2
         }
         #endregion
         #region --- ссылки на классы Class ---
-        ClassTextBox DeterminantOfMatrix;
-        ClassTextBox Matrix1;
-        ClassTextBox Matrix2;
+        matrix Matrix1;
+        matrix Matrix2;
         #endregion
         #region --- удаление матриц Click Remove ---
         private void RemoveMatrix_Click(object sender, EventArgs e)
         {
-            if (DeterminantOfMatrix != null)
+            if (Matrix1 != null)
             {
-                foreach (var item in DeterminantOfMatrix.textBoxArr)
+                foreach (var item in Matrix1.textBoxArr)
                 {
                     Controls.Remove(item);
                 }
@@ -60,29 +59,29 @@ namespace matrices2
         {
             RemoveMatrix_Click(sender, e);
             int rows = (int)numericUpDownRowsDeterminant.Value;
-            DeterminantOfMatrix = new ClassTextBox(rows, checkBoxRandomDeterminant.Checked);
+            Matrix1 = new matrix(rows, checkBoxRandomDeterminant.Checked);
 
-            Adds(DeterminantOfMatrix);
+            Adds(Matrix1);
         }
         #endregion
         #region --- Determinant button Click---
         private void buttonDeterminant_Click(object sender, EventArgs e)
         {
-            if (DeterminantOfMatrix == null)
+            if (Matrix1 == null)
             {
                 messageBox("МАТРИЦА НЕ СОЗДАНА");
                 return;
             }
 
 
-            int rows = DeterminantOfMatrix.rows;
+            int rows = Matrix1.rows;
             double[,] matrix = new double[rows, rows];
 
             for (int i = 0; i < rows; i++)
             {
                 for (int k = 0; k < rows; k++)
                 {
-                    matrix[i, k] = Convert.ToDouble(DeterminantOfMatrix.textBoxArr[k, i].Text);
+                    matrix[i, k] = Convert.ToDouble(Matrix1.textBoxArr[k, i].Text);
                 }
             }
 
@@ -243,8 +242,8 @@ namespace matrices2
             int column = (int)numericUpDownColumnSum1.Value;
             #endregion
 
-            Matrix1 = new ClassTextBox(rows, column, checkBoxRandom1Sum.Checked, 1);
-            Matrix2 = new ClassTextBox(rows, column, checkBoxRandom2Sum.Checked, 2);
+            Matrix1 = new matrix(rows, column, checkBoxRandom1Sum.Checked, 1);
+            Matrix2 = new matrix(rows, column, checkBoxRandom2Sum.Checked, 2);
 
             #region --- Add TextBox on form ---
             Adds(Matrix1);
@@ -266,7 +265,7 @@ namespace matrices2
                 MessageBoxDefaultButton.Button1
                 );
         }
-        private void Adds(ClassTextBox classTextBox)
+        private void Adds(matrix classTextBox)
         {
             Controls.Add(classTextBox.label);
 
@@ -275,7 +274,12 @@ namespace matrices2
                 Controls.Add(item);
             }
         }
+
         #endregion
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

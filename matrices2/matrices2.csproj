@@ -48,7 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassTextBox.cs" />
+    <Compile Include="IoutputToFomma.cs" />
+    <Compile Include="Isize.cs" />
+    <Compile Include="matrix.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

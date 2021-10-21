@@ -8,38 +8,39 @@ using System.Windows.Forms;
 
 namespace matrices2
 {
-    class ClassTextBox
+    class matrix : Isize, IoutputToFomma
     {
         public int rows { get; set; }
         public int columns { get; set; }
 
         public Label label { get; set; }
-        public TextBox[,] textBoxArr;
+        public TextBox[,] textBoxArr { get; set; }
 
         #region --- constructor конструктор ---
-        public ClassTextBox(int rows, bool random)//determ
+        public matrix(int rows, bool random)//determ
         {
             this.rows = rows;
+            this.columns = rows;
             textBoxArr = new TextBox[rows, rows];
-            creatingDisplayingTextBox(random);
+            creatingDisplayingMatrixTextBox(random);
         }
-        public ClassTextBox(int rows, int columns, bool random, int matrixNumber)//sum
+        public matrix(int rows, int columns, bool random, int matrixNumber)//sum
         {
             this.rows = rows;
             this.columns = columns;
             textBoxArr = new TextBox[rows, columns];
-            creatingDisplayingTextBoxSum(matrixNumber, random);
+            creatingDisplayingMatrixTextBox(random, matrixNumber);
         }
         #endregion
 
         #region --- methods методы ---
         //создание Text Box
-        void creatingDisplayingTextBox(bool random = false)
+        /*void creatingDisplayingTextBox(bool random = false)
         {
             var rand = new Random();
             for (int i = 0; i < rows; i++)
             {
-                for (int k = 0; k < rows; k++)
+                for (int k = 0; k < columns; k++)
                 {
                     textBoxArr[i, k] = new System.Windows.Forms.TextBox
                     {
@@ -54,10 +55,14 @@ namespace matrices2
                     };
                 }
             }
-        }
-        void creatingDisplayingTextBoxSum(int matrixNumber, bool random = false)
+        }*/
+        void creatingDisplayingMatrixTextBox(bool random = false, int matrixNumber = 1)
         {
-            var rand = new Random();
+            creatingDisplayingLabel(matrixNumber);
+            creatingDisplayingTextBox(random, matrixNumber);
+        }
+        void creatingDisplayingLabel(int matrixNumber)
+        {
             label = new Label
             {
                 Text = "M" + matrixNumber,
@@ -66,6 +71,11 @@ namespace matrices2
                 ForeColor = Color.FromArgb(144, 155, 169),
                 Size = new Size(50, 20),
             };
+        }
+        void creatingDisplayingTextBox(bool random = false, int matrixNumber = 1)
+        {
+            var rand = new Random();
+
             for (int i = 0; i < rows; i++)
             {
                 for (int k = 0; k < columns; k++)
