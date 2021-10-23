@@ -66,15 +66,36 @@ namespace matrices2
                 case "-":
                     buttonCreateSD();
                     break;
+                case "*":
+                    buttonCreateM();
+                    break;
 
                 default:
                     break;
             }
         }
+        private void buttonCreateM()
+        {
+            int rows1 = (int)(numericUpDownRows1.Value);
+            int column1 = (int)(numericUpDownColumn1.Value);
+            int rows2 = (int)(numericUpDownRows2.Value);
+            int column2 = (int)(numericUpDownColumn2.Value);
+
+            if (rows1 != column2)
+            {
+                messageBox("rows1 != column2");
+                return;
+            }
+            Matrix1 = new matrix(rows1, column1, checkBoxRandom1Sum.Checked, 1);
+            Matrix2 = new matrix(rows2, column2, checkBoxRandom2Sum.Checked, 2);
+
+            Adds(Matrix1);
+            Adds(Matrix2);
+        }
         private void buttonCreateSD()
         {
-            int rows = (int)numericUpDownRowsSum.Value;
-            int column = (int)numericUpDownColumnSum.Value;
+            int rows = (int)numericUpDownRows.Value;
+            int column = (int)numericUpDownColumn.Value;
 
             Matrix1 = new matrix(rows, column, checkBoxRandom1Sum.Checked, 1);
             Matrix2 = new matrix(rows, column, checkBoxRandom2Sum.Checked, 2);
@@ -142,7 +163,25 @@ namespace matrices2
         }
         private void multiplyStart()
         {
+            int rows1 = (int)(numericUpDownRows1.Value);
+            int column1 = (int)(numericUpDownColumn1.Value);
+            int rows2 = (int)(numericUpDownRows2.Value);
+            int column2 = (int)(numericUpDownColumn2.Value);
 
+            for (int i = 0; i < rows1; i++)
+            {
+                for (int j = 0; j < column2; j++)
+                {
+                    for (int k = 0; k < rows2; k++)
+                    {
+                        Matrix1.textBoxArr[i, k].Text = Convert.ToString(
+                            int.Parse(Matrix1.textBoxArr[i, k].Text) +
+                            int.Parse(Matrix1.textBoxArr[i, k].Text) *
+                            int.Parse(Matrix2.textBoxArr[k, j].Text));
+                    }
+                }
+                Console.WriteLine();
+            }
         }
         #endregion
 
@@ -267,8 +306,8 @@ namespace matrices2
 
         private void difference()
         {
-            int rows = (int)(numericUpDownRowsSum.Value);
-            int column = (int)(numericUpDownColumnSum.Value);
+            int rows = (int)(numericUpDownRows.Value);
+            int column = (int)(numericUpDownColumn.Value);
             for (int i = 0; i < rows; i++)
             {
                 for (int k = 0; k < column; k++)
@@ -284,8 +323,8 @@ namespace matrices2
         }
         private void sum()
         {
-            int rows = (int)(numericUpDownRowsSum.Value);
-            int column = (int)(numericUpDownColumnSum.Value);
+            int rows = (int)(numericUpDownRows.Value);
+            int column = (int)(numericUpDownColumn.Value);
             for (int i = 0; i < rows; i++)
             {
                 for (int k = 0; k < column; k++)

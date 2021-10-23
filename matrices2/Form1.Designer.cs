@@ -40,10 +40,10 @@ namespace matrices2
             this.checkBoxRandom1Sum = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDownColumnSum = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownColumn = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDownRowsSum = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownRows = new System.Windows.Forms.NumericUpDown();
             this.tabPageMultiply = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxOperations = new System.Windows.Forms.ComboBox();
@@ -52,12 +52,29 @@ namespace matrices2
             this.buttonOperations = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numericUpDownColumn1 = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numericUpDownRows1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownRows2 = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numericUpDownColumn2 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsDeterminant)).BeginInit();
             this.tabControlOperations.SuspendLayout();
             this.tabPageDeterminant.SuspendLayout();
             this.tabPageSum.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumnSum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsSum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows)).BeginInit();
+            this.tabPageMultiply.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumn1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumn2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelDeterminant
@@ -164,10 +181,10 @@ namespace matrices2
             this.tabPageSum.Controls.Add(this.checkBoxRandom1Sum);
             this.tabPageSum.Controls.Add(this.label7);
             this.tabPageSum.Controls.Add(this.label8);
-            this.tabPageSum.Controls.Add(this.numericUpDownColumnSum);
+            this.tabPageSum.Controls.Add(this.numericUpDownColumn);
             this.tabPageSum.Controls.Add(this.label4);
             this.tabPageSum.Controls.Add(this.label3);
-            this.tabPageSum.Controls.Add(this.numericUpDownRowsSum);
+            this.tabPageSum.Controls.Add(this.numericUpDownRows);
             this.tabPageSum.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.tabPageSum.Location = new System.Drawing.Point(4, 28);
             this.tabPageSum.Name = "tabPageSum";
@@ -226,29 +243,29 @@ namespace matrices2
             this.label8.TabIndex = 32;
             this.label8.Text = "Matrix 2";
             // 
-            // numericUpDownColumnSum
+            // numericUpDownColumn
             // 
-            this.numericUpDownColumnSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.numericUpDownColumnSum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDownColumnSum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numericUpDownColumnSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDownColumnSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.numericUpDownColumnSum.Location = new System.Drawing.Point(96, 110);
-            this.numericUpDownColumnSum.Maximum = new decimal(new int[] {
+            this.numericUpDownColumn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.numericUpDownColumn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDownColumn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownColumn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.numericUpDownColumn.Location = new System.Drawing.Point(96, 110);
+            this.numericUpDownColumn.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDownColumnSum.Minimum = new decimal(new int[] {
+            this.numericUpDownColumn.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDownColumnSum.Name = "numericUpDownColumnSum";
-            this.numericUpDownColumnSum.Size = new System.Drawing.Size(67, 25);
-            this.numericUpDownColumnSum.TabIndex = 25;
-            this.numericUpDownColumnSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDownColumnSum.Value = new decimal(new int[] {
+            this.numericUpDownColumn.Name = "numericUpDownColumn";
+            this.numericUpDownColumn.Size = new System.Drawing.Size(67, 25);
+            this.numericUpDownColumn.TabIndex = 25;
+            this.numericUpDownColumn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownColumn.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -276,29 +293,29 @@ namespace matrices2
             this.label3.TabIndex = 21;
             this.label3.Text = "Rows";
             // 
-            // numericUpDownRowsSum
+            // numericUpDownRows
             // 
-            this.numericUpDownRowsSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.numericUpDownRowsSum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDownRowsSum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numericUpDownRowsSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDownRowsSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.numericUpDownRowsSum.Location = new System.Drawing.Point(96, 79);
-            this.numericUpDownRowsSum.Maximum = new decimal(new int[] {
+            this.numericUpDownRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.numericUpDownRows.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDownRows.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownRows.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownRows.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.numericUpDownRows.Location = new System.Drawing.Point(96, 79);
+            this.numericUpDownRows.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDownRowsSum.Minimum = new decimal(new int[] {
+            this.numericUpDownRows.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDownRowsSum.Name = "numericUpDownRowsSum";
-            this.numericUpDownRowsSum.Size = new System.Drawing.Size(67, 25);
-            this.numericUpDownRowsSum.TabIndex = 20;
-            this.numericUpDownRowsSum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDownRowsSum.Value = new decimal(new int[] {
+            this.numericUpDownRows.Name = "numericUpDownRows";
+            this.numericUpDownRows.Size = new System.Drawing.Size(67, 25);
+            this.numericUpDownRows.TabIndex = 20;
+            this.numericUpDownRows.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownRows.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -306,6 +323,18 @@ namespace matrices2
             // 
             // tabPageMultiply
             // 
+            this.tabPageMultiply.Controls.Add(this.numericUpDownRows2);
+            this.tabPageMultiply.Controls.Add(this.checkBox1);
+            this.tabPageMultiply.Controls.Add(this.label12);
+            this.tabPageMultiply.Controls.Add(this.label13);
+            this.tabPageMultiply.Controls.Add(this.label6);
+            this.tabPageMultiply.Controls.Add(this.numericUpDownColumn2);
+            this.tabPageMultiply.Controls.Add(this.checkBox2);
+            this.tabPageMultiply.Controls.Add(this.numericUpDownRows1);
+            this.tabPageMultiply.Controls.Add(this.label11);
+            this.tabPageMultiply.Controls.Add(this.label9);
+            this.tabPageMultiply.Controls.Add(this.label10);
+            this.tabPageMultiply.Controls.Add(this.numericUpDownColumn1);
             this.tabPageMultiply.Location = new System.Drawing.Point(4, 28);
             this.tabPageMultiply.Name = "tabPageMultiply";
             this.tabPageMultiply.Padding = new System.Windows.Forms.Padding(3);
@@ -438,6 +467,212 @@ namespace matrices2
             this.label2.TabIndex = 36;
             this.label2.Text = "language";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.checkBox1.Location = new System.Drawing.Point(85, 95);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(101, 28);
+            this.checkBox1.TabIndex = 37;
+            this.checkBox1.Text = "Random";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.checkBox2.Location = new System.Drawing.Point(85, 6);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(101, 28);
+            this.checkBox2.TabIndex = 38;
+            this.checkBox2.Text = "Random";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.label6.Location = new System.Drawing.Point(7, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 24);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Matrix 1";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.label9.Location = new System.Drawing.Point(6, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 24);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Matrix 2";
+            // 
+            // numericUpDownColumn1
+            // 
+            this.numericUpDownColumn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.numericUpDownColumn1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDownColumn1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownColumn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownColumn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.numericUpDownColumn1.Location = new System.Drawing.Point(97, 64);
+            this.numericUpDownColumn1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownColumn1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownColumn1.Name = "numericUpDownColumn1";
+            this.numericUpDownColumn1.Size = new System.Drawing.Size(67, 25);
+            this.numericUpDownColumn1.TabIndex = 41;
+            this.numericUpDownColumn1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownColumn1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.label10.Location = new System.Drawing.Point(7, 63);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 24);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Column";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.label11.Location = new System.Drawing.Point(7, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 24);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Rows";
+            // 
+            // numericUpDownRows1
+            // 
+            this.numericUpDownRows1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.numericUpDownRows1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDownRows1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownRows1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownRows1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.numericUpDownRows1.Location = new System.Drawing.Point(97, 33);
+            this.numericUpDownRows1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownRows1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownRows1.Name = "numericUpDownRows1";
+            this.numericUpDownRows1.Size = new System.Drawing.Size(67, 25);
+            this.numericUpDownRows1.TabIndex = 39;
+            this.numericUpDownRows1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownRows1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownRows2
+            // 
+            this.numericUpDownRows2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.numericUpDownRows2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDownRows2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownRows2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownRows2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.numericUpDownRows2.Location = new System.Drawing.Point(97, 131);
+            this.numericUpDownRows2.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownRows2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownRows2.Name = "numericUpDownRows2";
+            this.numericUpDownRows2.Size = new System.Drawing.Size(67, 25);
+            this.numericUpDownRows2.TabIndex = 43;
+            this.numericUpDownRows2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownRows2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.label12.Location = new System.Drawing.Point(7, 130);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 24);
+            this.label12.TabIndex = 44;
+            this.label12.Text = "Rows";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.label13.Location = new System.Drawing.Point(7, 161);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 24);
+            this.label13.TabIndex = 46;
+            this.label13.Text = "Column";
+            // 
+            // numericUpDownColumn2
+            // 
+            this.numericUpDownColumn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.numericUpDownColumn2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDownColumn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numericUpDownColumn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownColumn2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.numericUpDownColumn2.Location = new System.Drawing.Point(97, 162);
+            this.numericUpDownColumn2.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownColumn2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownColumn2.Name = "numericUpDownColumn2";
+            this.numericUpDownColumn2.Size = new System.Drawing.Size(67, 25);
+            this.numericUpDownColumn2.TabIndex = 45;
+            this.numericUpDownColumn2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownColumn2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,8 +695,14 @@ namespace matrices2
             this.tabPageDeterminant.PerformLayout();
             this.tabPageSum.ResumeLayout(false);
             this.tabPageSum.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumnSum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsSum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows)).EndInit();
+            this.tabPageMultiply.ResumeLayout(false);
+            this.tabPageMultiply.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumn1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumn2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,11 +717,11 @@ namespace matrices2
         private System.Windows.Forms.TabPage tabPageDeterminant;
         private System.Windows.Forms.TabPage tabPageSum;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDownColumnSum;
+        private System.Windows.Forms.NumericUpDown numericUpDownColumn;
         private System.Windows.Forms.Button buttonOperations;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCreateOperations;
-        private System.Windows.Forms.NumericUpDown numericUpDownRowsSum;
+        private System.Windows.Forms.NumericUpDown numericUpDownRows;
         private System.Windows.Forms.Button buttonRemoveSum;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -492,6 +733,18 @@ namespace matrices2
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPageMultiply;
+        private System.Windows.Forms.NumericUpDown numericUpDownRows2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericUpDownColumn2;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.NumericUpDown numericUpDownRows1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown numericUpDownColumn1;
     }
 }
 
