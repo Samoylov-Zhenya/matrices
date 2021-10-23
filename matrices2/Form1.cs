@@ -159,21 +159,6 @@ namespace matrices2
         #endregion
 
         #region --- Sum ---
-        private void comboBoxOperations_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Sum of matrices
-            switch (comboBoxOperations.Text)
-            {
-                case "+":
-                    buttonSum.Text = "Sum of matrices";
-                    break;
-
-                default:
-                    buttonSum.Text = "Difference of matrices";
-                    break;
-            }
-        }
-
         #region --- button Sum ---
         private void buttonSum_Click(object sender, EventArgs e)
         {
@@ -276,10 +261,38 @@ namespace matrices2
         }
 
         #endregion
+        private void comboBoxOperations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBoxOperations.Text)
+            {
+                case "+":
+                    tabControlOperations.SelectedTab = tabPageSum;
+                    buttonSum.Text = "Sum of matrices";
+                    break;
+                case "-":
+                    tabControlOperations.SelectedTab = tabPageSum;
+                    buttonSum.Text = "Difference of matrices";
+                    break;
+                case "*":
+                    tabControlOperations.SelectedTab = tabPageMultiply;
+                    buttonSum.Text = "Multiply of matrices";
+                    break;
 
+                default:
+                    tabControlOperations.SelectedTab = tabPageDeterminant;
+                    buttonSum.Text = "Det of matrices";
+                    break;
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string[,] language = new string[2,10];
         }
     }
 }

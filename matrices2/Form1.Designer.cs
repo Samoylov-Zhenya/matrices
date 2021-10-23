@@ -35,27 +35,28 @@ namespace matrices2
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDownRowsDeterminant = new System.Windows.Forms.NumericUpDown();
             this.buttonCreateMatrix = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlOperations = new System.Windows.Forms.TabControl();
             this.tabPageDeterminant = new System.Windows.Forms.TabPage();
             this.checkBoxRandomDeterminant = new System.Windows.Forms.CheckBox();
             this.tabPageSum = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxOperations = new System.Windows.Forms.ComboBox();
-            this.buttonCreateSum = new System.Windows.Forms.Button();
             this.checkBoxRandom2Sum = new System.Windows.Forms.CheckBox();
             this.checkBoxRandom1Sum = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.buttonRemoveSum = new System.Windows.Forms.Button();
-            this.buttonSum = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.numericUpDownColumnSum1 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDownRowsSum1 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxOperations = new System.Windows.Forms.ComboBox();
+            this.buttonCreateSum = new System.Windows.Forms.Button();
+            this.buttonRemoveSum = new System.Windows.Forms.Button();
+            this.buttonSum = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabPageMultiply = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsDeterminant)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tabControlOperations.SuspendLayout();
             this.tabPageDeterminant.SuspendLayout();
             this.tabPageSum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumnSum1)).BeginInit();
@@ -67,7 +68,7 @@ namespace matrices2
             this.labelDeterminant.AutoSize = true;
             this.labelDeterminant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDeterminant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.labelDeterminant.Location = new System.Drawing.Point(26, 233);
+            this.labelDeterminant.Location = new System.Drawing.Point(26, 101);
             this.labelDeterminant.Name = "labelDeterminant";
             this.labelDeterminant.Size = new System.Drawing.Size(116, 24);
             this.labelDeterminant.TabIndex = 17;
@@ -86,9 +87,9 @@ namespace matrices2
             this.buttonRemoveMatrix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemoveMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonRemoveMatrix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.buttonRemoveMatrix.Location = new System.Drawing.Point(98, 104);
+            this.buttonRemoveMatrix.Location = new System.Drawing.Point(96, 139);
             this.buttonRemoveMatrix.Name = "buttonRemoveMatrix";
-            this.buttonRemoveMatrix.Size = new System.Drawing.Size(88, 40);
+            this.buttonRemoveMatrix.Size = new System.Drawing.Size(90, 40);
             this.buttonRemoveMatrix.TabIndex = 16;
             this.buttonRemoveMatrix.Text = "Remove matrix";
             this.buttonRemoveMatrix.UseVisualStyleBackColor = false;
@@ -107,7 +108,7 @@ namespace matrices2
             this.buttonDeterminant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeterminant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDeterminant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.buttonDeterminant.Location = new System.Drawing.Point(6, 150);
+            this.buttonDeterminant.Location = new System.Drawing.Point(598, 472);
             this.buttonDeterminant.Name = "buttonDeterminant";
             this.buttonDeterminant.Size = new System.Drawing.Size(180, 68);
             this.buttonDeterminant.TabIndex = 15;
@@ -167,35 +168,35 @@ namespace matrices2
             this.buttonCreateMatrix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreateMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCreateMatrix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.buttonCreateMatrix.Location = new System.Drawing.Point(6, 104);
+            this.buttonCreateMatrix.Location = new System.Drawing.Point(6, 139);
             this.buttonCreateMatrix.Name = "buttonCreateMatrix";
-            this.buttonCreateMatrix.Size = new System.Drawing.Size(86, 40);
+            this.buttonCreateMatrix.Size = new System.Drawing.Size(90, 40);
             this.buttonCreateMatrix.TabIndex = 10;
             this.buttonCreateMatrix.Text = "Create matrix";
             this.buttonCreateMatrix.UseVisualStyleBackColor = false;
             this.buttonCreateMatrix.Click += new System.EventHandler(this.buttonCreateMatrix_Click);
             // 
-            // tabControl1
+            // tabControlOperations
             // 
-            this.tabControl1.Controls.Add(this.tabPageDeterminant);
-            this.tabControl1.Controls.Add(this.tabPageSum);
-            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.ItemSize = new System.Drawing.Size(70, 24);
-            this.tabControl1.Location = new System.Drawing.Point(588, 51);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Padding = new System.Drawing.Point(2, 0);
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(200, 489);
-            this.tabControl1.TabIndex = 18;
+            this.tabControlOperations.Controls.Add(this.tabPageDeterminant);
+            this.tabControlOperations.Controls.Add(this.tabPageSum);
+            this.tabControlOperations.Controls.Add(this.tabPageMultiply);
+            this.tabControlOperations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabControlOperations.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControlOperations.ItemSize = new System.Drawing.Size(70, 24);
+            this.tabControlOperations.Location = new System.Drawing.Point(589, 88);
+            this.tabControlOperations.Multiline = true;
+            this.tabControlOperations.Name = "tabControlOperations";
+            this.tabControlOperations.Padding = new System.Drawing.Point(2, 0);
+            this.tabControlOperations.SelectedIndex = 0;
+            this.tabControlOperations.Size = new System.Drawing.Size(200, 238);
+            this.tabControlOperations.TabIndex = 18;
             // 
             // tabPageDeterminant
             // 
             this.tabPageDeterminant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(32)))), ((int)(((byte)(48)))));
             this.tabPageDeterminant.Controls.Add(this.checkBoxRandomDeterminant);
             this.tabPageDeterminant.Controls.Add(this.buttonCreateMatrix);
-            this.tabPageDeterminant.Controls.Add(this.buttonDeterminant);
             this.tabPageDeterminant.Controls.Add(this.labelDeterminant);
             this.tabPageDeterminant.Controls.Add(this.buttonRemoveMatrix);
             this.tabPageDeterminant.Controls.Add(this.numericUpDownRowsDeterminant);
@@ -203,7 +204,7 @@ namespace matrices2
             this.tabPageDeterminant.Location = new System.Drawing.Point(4, 28);
             this.tabPageDeterminant.Name = "tabPageDeterminant";
             this.tabPageDeterminant.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDeterminant.Size = new System.Drawing.Size(192, 457);
+            this.tabPageDeterminant.Size = new System.Drawing.Size(192, 206);
             this.tabPageDeterminant.TabIndex = 0;
             this.tabPageDeterminant.Text = "Det";
             // 
@@ -227,14 +228,9 @@ namespace matrices2
             // tabPageSum
             // 
             this.tabPageSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.tabPageSum.Controls.Add(this.label5);
-            this.tabPageSum.Controls.Add(this.comboBoxOperations);
-            this.tabPageSum.Controls.Add(this.buttonCreateSum);
             this.tabPageSum.Controls.Add(this.checkBoxRandom2Sum);
             this.tabPageSum.Controls.Add(this.checkBoxRandom1Sum);
             this.tabPageSum.Controls.Add(this.label7);
-            this.tabPageSum.Controls.Add(this.buttonRemoveSum);
-            this.tabPageSum.Controls.Add(this.buttonSum);
             this.tabPageSum.Controls.Add(this.label8);
             this.tabPageSum.Controls.Add(this.numericUpDownColumnSum1);
             this.tabPageSum.Controls.Add(this.label4);
@@ -244,61 +240,9 @@ namespace matrices2
             this.tabPageSum.Location = new System.Drawing.Point(4, 28);
             this.tabPageSum.Name = "tabPageSum";
             this.tabPageSum.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSum.Size = new System.Drawing.Size(192, 457);
+            this.tabPageSum.Size = new System.Drawing.Size(192, 206);
             this.tabPageSum.TabIndex = 1;
-            this.tabPageSum.Text = "+ / -";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.label5.Location = new System.Drawing.Point(6, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 24);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Operations";
-            // 
-            // comboBoxOperations
-            // 
-            this.comboBoxOperations.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxOperations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
-            this.comboBoxOperations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxOperations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxOperations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.comboBoxOperations.FormattingEnabled = true;
-            this.comboBoxOperations.Items.AddRange(new object[] {
-            "det",
-            "+",
-            "-",
-            "*"});
-            this.comboBoxOperations.Location = new System.Drawing.Point(123, 14);
-            this.comboBoxOperations.Name = "comboBoxOperations";
-            this.comboBoxOperations.Size = new System.Drawing.Size(40, 32);
-            this.comboBoxOperations.TabIndex = 33;
-            this.comboBoxOperations.Text = "+";
-            this.comboBoxOperations.SelectedIndexChanged += new System.EventHandler(this.comboBoxOperations_SelectedIndexChanged);
-            // 
-            // buttonCreateSum
-            // 
-            this.buttonCreateSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
-            this.buttonCreateSum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonCreateSum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCreateSum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonCreateSum.FlatAppearance.BorderSize = 0;
-            this.buttonCreateSum.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonCreateSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonCreateSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonCreateSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCreateSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.buttonCreateSum.Location = new System.Drawing.Point(6, 213);
-            this.buttonCreateSum.Name = "buttonCreateSum";
-            this.buttonCreateSum.Size = new System.Drawing.Size(90, 40);
-            this.buttonCreateSum.TabIndex = 19;
-            this.buttonCreateSum.Text = "Create matrix";
-            this.buttonCreateSum.UseVisualStyleBackColor = false;
-            this.buttonCreateSum.Click += new System.EventHandler(this.buttonCreateSum_Click);
+            this.tabPageSum.Text = "+ / - ";
             // 
             // checkBoxRandom2Sum
             // 
@@ -307,7 +251,7 @@ namespace matrices2
             this.checkBoxRandom2Sum.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxRandom2Sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxRandom2Sum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.checkBoxRandom2Sum.Location = new System.Drawing.Point(85, 117);
+            this.checkBoxRandom2Sum.Location = new System.Drawing.Point(85, 45);
             this.checkBoxRandom2Sum.Name = "checkBoxRandom2Sum";
             this.checkBoxRandom2Sum.Size = new System.Drawing.Size(101, 28);
             this.checkBoxRandom2Sum.TabIndex = 19;
@@ -321,7 +265,7 @@ namespace matrices2
             this.checkBoxRandom1Sum.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxRandom1Sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxRandom1Sum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.checkBoxRandom1Sum.Location = new System.Drawing.Point(85, 83);
+            this.checkBoxRandom1Sum.Location = new System.Drawing.Point(85, 11);
             this.checkBoxRandom1Sum.Name = "checkBoxRandom1Sum";
             this.checkBoxRandom1Sum.Size = new System.Drawing.Size(101, 28);
             this.checkBoxRandom1Sum.TabIndex = 19;
@@ -333,60 +277,18 @@ namespace matrices2
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.label7.Location = new System.Drawing.Point(7, 85);
+            this.label7.Location = new System.Drawing.Point(7, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 24);
             this.label7.TabIndex = 31;
             this.label7.Text = "Matrix 1";
-            // 
-            // buttonRemoveSum
-            // 
-            this.buttonRemoveSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
-            this.buttonRemoveSum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonRemoveSum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRemoveSum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonRemoveSum.FlatAppearance.BorderSize = 0;
-            this.buttonRemoveSum.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonRemoveSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonRemoveSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonRemoveSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRemoveSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRemoveSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.buttonRemoveSum.Location = new System.Drawing.Point(96, 213);
-            this.buttonRemoveSum.Name = "buttonRemoveSum";
-            this.buttonRemoveSum.Size = new System.Drawing.Size(90, 40);
-            this.buttonRemoveSum.TabIndex = 23;
-            this.buttonRemoveSum.Text = "Remove matrix";
-            this.buttonRemoveSum.UseVisualStyleBackColor = false;
-            this.buttonRemoveSum.Click += new System.EventHandler(this.RemoveMatrix_Click);
-            // 
-            // buttonSum
-            // 
-            this.buttonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
-            this.buttonSum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonSum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonSum.FlatAppearance.BorderSize = 0;
-            this.buttonSum.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.buttonSum.Location = new System.Drawing.Point(6, 259);
-            this.buttonSum.Name = "buttonSum";
-            this.buttonSum.Size = new System.Drawing.Size(180, 65);
-            this.buttonSum.TabIndex = 22;
-            this.buttonSum.Text = "Sum of matrices";
-            this.buttonSum.UseVisualStyleBackColor = false;
-            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.label8.Location = new System.Drawing.Point(6, 118);
+            this.label8.Location = new System.Drawing.Point(6, 46);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 24);
             this.label8.TabIndex = 32;
@@ -399,7 +301,7 @@ namespace matrices2
             this.numericUpDownColumnSum1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.numericUpDownColumnSum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numericUpDownColumnSum1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.numericUpDownColumnSum1.Location = new System.Drawing.Point(96, 182);
+            this.numericUpDownColumnSum1.Location = new System.Drawing.Point(96, 110);
             this.numericUpDownColumnSum1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -425,7 +327,7 @@ namespace matrices2
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.label4.Location = new System.Drawing.Point(6, 181);
+            this.label4.Location = new System.Drawing.Point(6, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 24);
             this.label4.TabIndex = 26;
@@ -436,7 +338,7 @@ namespace matrices2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.label3.Location = new System.Drawing.Point(6, 150);
+            this.label3.Location = new System.Drawing.Point(6, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 24);
             this.label3.TabIndex = 21;
@@ -449,7 +351,7 @@ namespace matrices2
             this.numericUpDownRowsSum1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.numericUpDownRowsSum1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numericUpDownRowsSum1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
-            this.numericUpDownRowsSum1.Location = new System.Drawing.Point(96, 151);
+            this.numericUpDownRowsSum1.Location = new System.Drawing.Point(96, 79);
             this.numericUpDownRowsSum1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -470,6 +372,100 @@ namespace matrices2
             0,
             0});
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.label5.Location = new System.Drawing.Point(588, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 24);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Operations";
+            // 
+            // comboBoxOperations
+            // 
+            this.comboBoxOperations.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxOperations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(45)))), ((int)(((byte)(59)))));
+            this.comboBoxOperations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxOperations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxOperations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.comboBoxOperations.FormattingEnabled = true;
+            this.comboBoxOperations.Items.AddRange(new object[] {
+            "det",
+            "+",
+            "-",
+            "*"});
+            this.comboBoxOperations.Location = new System.Drawing.Point(717, 50);
+            this.comboBoxOperations.Name = "comboBoxOperations";
+            this.comboBoxOperations.Size = new System.Drawing.Size(71, 32);
+            this.comboBoxOperations.TabIndex = 33;
+            this.comboBoxOperations.Text = "+";
+            this.comboBoxOperations.SelectedIndexChanged += new System.EventHandler(this.comboBoxOperations_SelectedIndexChanged);
+            // 
+            // buttonCreateSum
+            // 
+            this.buttonCreateSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
+            this.buttonCreateSum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonCreateSum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCreateSum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCreateSum.FlatAppearance.BorderSize = 0;
+            this.buttonCreateSum.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCreateSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCreateSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonCreateSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCreateSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.buttonCreateSum.Location = new System.Drawing.Point(598, 426);
+            this.buttonCreateSum.Name = "buttonCreateSum";
+            this.buttonCreateSum.Size = new System.Drawing.Size(90, 40);
+            this.buttonCreateSum.TabIndex = 19;
+            this.buttonCreateSum.Text = "Create matrix";
+            this.buttonCreateSum.UseVisualStyleBackColor = false;
+            this.buttonCreateSum.Click += new System.EventHandler(this.buttonCreateSum_Click);
+            // 
+            // buttonRemoveSum
+            // 
+            this.buttonRemoveSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
+            this.buttonRemoveSum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonRemoveSum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRemoveSum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRemoveSum.FlatAppearance.BorderSize = 0;
+            this.buttonRemoveSum.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRemoveSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRemoveSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonRemoveSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemoveSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRemoveSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.buttonRemoveSum.Location = new System.Drawing.Point(688, 426);
+            this.buttonRemoveSum.Name = "buttonRemoveSum";
+            this.buttonRemoveSum.Size = new System.Drawing.Size(90, 40);
+            this.buttonRemoveSum.TabIndex = 23;
+            this.buttonRemoveSum.Text = "Remove matrix";
+            this.buttonRemoveSum.UseVisualStyleBackColor = false;
+            this.buttonRemoveSum.Click += new System.EventHandler(this.RemoveMatrix_Click);
+            // 
+            // buttonSum
+            // 
+            this.buttonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
+            this.buttonSum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSum.FlatAppearance.BorderSize = 0;
+            this.buttonSum.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(155)))), ((int)(((byte)(169)))));
+            this.buttonSum.Location = new System.Drawing.Point(412, 472);
+            this.buttonSum.Name = "buttonSum";
+            this.buttonSum.Size = new System.Drawing.Size(180, 65);
+            this.buttonSum.TabIndex = 22;
+            this.buttonSum.Text = "Sum of matrices";
+            this.buttonSum.UseVisualStyleBackColor = false;
+            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -487,6 +483,7 @@ namespace matrices2
             this.comboBox1.TabIndex = 35;
             this.comboBox1.Text = "English";
             this.comboBox1.UseWaitCursor = true;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -499,19 +496,35 @@ namespace matrices2
             this.label2.TabIndex = 36;
             this.label2.Text = "language";
             // 
+            // tabPageMultiply
+            // 
+            this.tabPageMultiply.Location = new System.Drawing.Point(4, 28);
+            this.tabPageMultiply.Name = "tabPageMultiply";
+            this.tabPageMultiply.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMultiply.Size = new System.Drawing.Size(192, 206);
+            this.tabPageMultiply.TabIndex = 2;
+            this.tabPageMultiply.Text = "  x";
+            this.tabPageMultiply.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(800, 552);
+            this.Controls.Add(this.buttonCreateSum);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBoxOperations);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.buttonRemoveSum);
+            this.Controls.Add(this.buttonDeterminant);
+            this.Controls.Add(this.tabControlOperations);
+            this.Controls.Add(this.buttonSum);
             this.Name = "Form1";
             this.Text = "matrices";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRowsDeterminant)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlOperations.ResumeLayout(false);
             this.tabPageDeterminant.ResumeLayout(false);
             this.tabPageDeterminant.PerformLayout();
             this.tabPageSum.ResumeLayout(false);
@@ -531,7 +544,7 @@ namespace matrices2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDownRowsDeterminant;
         private System.Windows.Forms.Button buttonCreateMatrix;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlOperations;
         private System.Windows.Forms.TabPage tabPageDeterminant;
         private System.Windows.Forms.TabPage tabPageSum;
         private System.Windows.Forms.Label label4;
@@ -550,6 +563,7 @@ namespace matrices2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPageMultiply;
     }
 }
 
