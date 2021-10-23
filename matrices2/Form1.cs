@@ -21,7 +21,7 @@ namespace matrices2
             InitializeComponent();
         }
         #endregion
-        #region --- ссылки на классы Class ---
+        #region --- классы Class ---
         matrix Matrix1;
         matrix Matrix2;
         #endregion
@@ -150,8 +150,8 @@ namespace matrices2
                 }
             }
 
-            labelDeterminant.Text = "Determinant: " + Convert.ToString(Determinant(matrix));
-            Console.WriteLine(Determinant(matrix));
+            //labelDeterminant.Text = "Determinant: " + Convert.ToString(Determinant(matrix));
+            //Console.WriteLine(Determinant(matrix));
         }
         private void sumStart()
         {
@@ -241,67 +241,7 @@ namespace matrices2
 
         #region --- Multiply ---
         #endregion
-        #region --- Determinant ---
-        static int SignOfElement(int i, int j)
-        {
-            if ((i + j) % 2 == 0)
-            {
-                return 1;
-            }
-            else
-            {
-                return -1;
-            }
-        }
-        static double[,] CreateSmallerMatrix(double[,] matrix, int column, int row)
-        {
-            int order = int.Parse(System.Math.Sqrt(matrix.Length).ToString());
-            double[,] output = new double[order - 1, order - 1];
-            int x = 0, y = 0;
-            for (int m = 0; m < order; m++, x++)
-            {
-                if (m != column)
-                {
-                    y = 0;
-                    for (int n = 0; n < order; n++)
-                    {
-                        if (n != row)
-                        {
-                            output[x, y] = matrix[m, n];
-                            y++;
-                        }
-                    }
-                }
-                else
-                {
-                    x--;
-                }
-            }
-            return output;
-        }
-        static double Determinant(double[,] matrix)
-        {
-            int order = int.Parse(System.Math.Sqrt(matrix.Length).ToString());
-            if (order > 2)
-            {
-                double value = 0;
-                for (int j = 0; j < order; j++)
-                {
-                    double[,] Temp = CreateSmallerMatrix(matrix, 0, j);
-                    value = value + matrix[0, j] * (SignOfElement(0, j) * Determinant(Temp));
-                }
-                return value;
-            }
-            else if (order == 2)
-            {
-                return ((matrix[0, 0] * matrix[1, 1]) - (matrix[1, 0] * matrix[0, 1]));
-            }
-            else
-            {
-                return (matrix[0, 0]);
-            }
-        }
-        #endregion
+        
         #region --- Sum and difference ---
 
         private void difference()
